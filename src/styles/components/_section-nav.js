@@ -17,7 +17,7 @@ export const SectionNavStyles = styled.div`
 		props.opacity &&
 		css`
 			opacity: 1;
-			transform: scale(1);
+	
 			z-index: 2;
 		`};
 

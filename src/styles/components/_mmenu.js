@@ -8,8 +8,13 @@ export const MmenuStyles = styled.div`
 	z-index: 3;
     cursor: pointer; 
 
-
 	.menu-container {
 		color: #fff;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 3px;
+        transition: .5s all;
+        &:hover {
+            color: #01ff70;
+        }
 	}
 `;
