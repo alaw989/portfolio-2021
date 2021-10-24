@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const MmenuStyles = styled.div`
 	position: absolute;
 	right: 25px;
@@ -13,6 +12,8 @@ export const MmenuStyles = styled.div`
         font-family: 'Roboto', sans-serif;
         letter-spacing: 3px;
         transition: .5s all;
+        font-size: .8rem;
+        text-transform: uppercase;
         &:hover {
             color: #01ff70;
         }

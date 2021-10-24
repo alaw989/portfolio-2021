@@ -8,7 +8,7 @@ const SectionNav = () => {
 	const { opacity, setOpacity } = useContext(opacityContext);
 
 	const changeOpacity = () => {
-		setOpacity(0);
+		setOpacity(false);
 	};
 
 	return (

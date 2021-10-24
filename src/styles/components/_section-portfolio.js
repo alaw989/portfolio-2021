@@ -2,58 +2,42 @@ import styled from 'styled-components';
 
 export const PortfolioStyles = styled.div`
 	width: 100%;
-	height: 40vw;
+	/* height: 40vw; */
 	max-height: 800px;
 	margin-top: 3em;
 
-
-
 	.section-portfolio {
 		width: 100%;
-		height: 40vw;
-		max-height: 800px;
+		/* height: 40vw; */
+		/* max-height: 800px; */
 		position: relative;
-
-		.big-text {
-			position: absolute;
-			font-size: 10rem;
-			top: 0;
-			right: 0;
-			font-weight: 700;
-			letter-spacing: -7px;
-			color: rgba(255, 255, 255, .05);
-			z-index: 0;
-			top: -170px;
-			@media (min-width: 992px) {
-				font-size: 20rem;
-				right: -80px;
-				top: -300px;
-			}
-		}
 
 		ul.portfolio-wrapper {
 			display: flex;
 			flex-wrap: wrap;
-			height: 40vw;
-			max-height: 800px;
+			/* height: 40vw; */
+			/* max-height: 800px; */
 			padding: 0;
+			justify-content: center;
 
 			li.project-block {
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				list-style-type: none;
-				width: 33.33%;
+				/* width: 33.33%; */
+				width: 48%;
+				padding: 5vw 0;
 				overflow: hidden;
 				position: relative;
-				min-height: 150px;
 				cursor: pointer;
 				transform: scale(1);
 				transition: .5s all;
-
-				@media (min-width: 768px) {
-					width: 25%;
-				}
+				border-radius: 15px; 
+				margin: 5px;
+				/* @media (min-width: 768px) {
+					width: 33.33%;
+				} */
 
 				&:hover {
 					.hover-container {
@@ -64,7 +48,6 @@ export const PortfolioStyles = styled.div`
 						opacity: 0;
 						transform: scale(0);
 					}
-
 					.bg-overlay {
 						background: rgba(0, 0, 0, 0);
 					}
@@ -101,10 +84,14 @@ export const PortfolioStyles = styled.div`
 					z-index: 3;
 					position: absolute;
 					letter-spacing: 2px;
-					font-weight: 500;
+					font-weight: 300;
 					font-family: 'Roboto', sans-serif;
 					transform: scale(1);
 					transition: .5s all;
+					background: rgba(0, 0, 0, .6);
+			
+					padding: 5px 10px;
+					max-width: 80%;
 				}
 
 				.hover-container {

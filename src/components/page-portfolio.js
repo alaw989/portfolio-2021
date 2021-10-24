@@ -9,6 +9,10 @@ import { useContext, useRef, useState } from 'react';
 import { PortfolioStyles } from '../styles/components/_section-portfolio.js';
 import miami from '../img/miami.png';
 import gutterhelmet from '../img/gutterhelmet.png';
+import cqm from '../img/cqm.png';
+import pond from '../img/pond.png';
+import dave from '../img/dave.png';
+import beewindow from '../img/beewindow.png';
 
 const Portfolio = () => {
 	const { opacity } = useContext(opacityContext);
@@ -21,7 +25,6 @@ const Portfolio = () => {
 
 	const customSlider = useRef();
 	const [ color, setColor ] = useState(0);
-	console.log(color);
 
 	return (
 		<PageStyles opacity={opacity}>
@@ -92,143 +95,147 @@ const Portfolio = () => {
 										setColor(1);
 									}}
 								>
-									React
+									React Show of Proof
 								</li>
 							</ul>
 						</FadeIn>
-						<Slider ref={customSlider} {...settings}>
-							<div className="slide">
-								<FadeIn delay={2000} transitionDuration={2000}>
-									<PortfolioStyles>
-										<div className="section-portfolio">
-											<div className="big-text">Work</div>
-											<ul className="portfolio-wrapper">
-												<li className="project-block">
-													{' '}
-													<div
-														className="bg-image"
-														style={{ backgroundImage: `url(${miami})` }}
-													>
+						<div className="slide-container">
+                        <FadeIn delay={1000} transitionDuration={2000}>	<div className="big-text">Work</div></FadeIn>
+							<Slider ref={customSlider} {...settings}>
+								<div className="slide">
+									<FadeIn delay={2000} transitionDuration={2000}>
+										<PortfolioStyles>
+											<div className="section-portfolio">
+												<ul className="portfolio-wrapper">
+													<li className="project-block">
 														{' '}
-													</div>
-													<div className="bg-overlay" />
-													<div className="hover-container">
-														View <br />Project
-													</div>
-													<div className="project-title">Miami Water & Air</div>
-												</li>
-												<li className="project-block">
-													{' '}
-													<div
-														className="bg-image"
-														style={{ backgroundImage: `url(${gutterhelmet})` }}
-													/>
-													<div className="bg-overlay" />
-													<div className="hover-container">
-														View <br />Project
-													</div>
-													<div className="project-title">Gutter Helmet of North Florida</div>
-												</li>
-												<li className="project-block">
-													{' '}
-													<div
-														className="bg-image"
-														style={{ backgroundImage: `url(${miami})` }}
-													>
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${miami})` }}
+														>
+															{' '}
+														</div>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															View <br />Project
+														</div>
+														<div className="project-title">Miami Water & Air</div>
+													</li>
+													<li className="project-block">
 														{' '}
-													</div>
-													<div className="bg-overlay" />
-													<div className="hover-container">
-														View <br />Project
-													</div>
-													<div className="project-title">Miami Water & Air</div>
-												</li>
-												<li className="project-block">
-													{' '}
-													<div
-														className="bg-image"
-														style={{ backgroundImage: `url(${gutterhelmet})` }}
-													>
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${gutterhelmet})` }}
+														/>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															View <br />Project
+														</div>
+														<div className="project-title">
+															Gutter Helmet of North Florida
+														</div>
+													</li>
+													<li className="project-block">
 														{' '}
-													</div>
-													<div className="bg-overlay" />
-													<div className="hover-container">
-														View <br />Project
-													</div>
-													<div className="project-title">Miami Water & Air</div>
-												</li>
-												<li className="project-block">
-													<div
-														className="bg-image"
-														style={{ backgroundImage: `url(${gutterhelmet})` }}
-													>
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${cqm})` }}
+														>
+															{' '}
+														</div>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															View <br />Project
+														</div>
+														<div className="project-title">CQM Inc.</div>
+													</li>
+													<li className="project-block">
 														{' '}
-													</div>
-													<div className="bg-overlay" />
-													<div className="hover-container">
-														{' '}
-														View <br />Project{' '}
-													</div>
-													<div className="project-title">Miami Water & Air</div>
-												</li>
-												<li className="project-block">
-													<div
-														className="bg-image"
-														style={{ backgroundImage: `url(${miami})` }}
-													>
-														{' '}
-													</div>
-													<div className="bg-overlay" />
-													<div className="hover-container">
-														View <br />Project
-													</div>
-													<div className="project-title">Miami Water & Air</div>
-												</li>
-											</ul>
-										</div>
-									</PortfolioStyles>
-								</FadeIn>
-							</div>
-							<div className="slide">
-								{' '}
-								<FadeIn delay={2000} transitionDuration={2000}>
-									<PortfolioStyles>
-										<div className="section-portfolio">
-											<div className="big-text">Work</div>
-											<ul className="portfolio-wrapper">
-												<li className="project-block">
-													<div
-														className="bg-image"
-														style={{ backgroundImage: `url(${gutterhelmet})` }}
-													>
-														{' '}
-													</div>
-													<div className="bg-overlay" />
-													<div className="hover-container">
-														{' '}
-														View <br />Project{' '}
-													</div>
-													<div className="project-title">Miami Water & Air</div>
-												</li>
-												<li className="project-block">
-													<div
-														className="bg-image"
-														style={{ backgroundImage: `url(${miami})` }}
-													>
-														{' '}
-													</div>
-													<div className="bg-overlay" />
-													<div className="hover-container">
-														View <br />Project
-													</div>
-													<div className="project-title">Miami Water & Air</div>
-												</li>
-											</ul>
-										</div>
-									</PortfolioStyles>
-								</FadeIn>
-							</div>
-						</Slider>
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${dave})` }}
+														>
+															{' '}
+														</div>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															View <br />Project
+														</div>
+														<div className="project-title">Dave Yoho & Associates</div>
+													</li>
+													<li className="project-block">
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${pond})` }}
+														>
+															{' '}
+														</div>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															{' '}
+															View <br />Project{' '}
+														</div>
+														<div className="project-title">Pond Roofing</div>
+													</li>
+													<li className="project-block">
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${beewindow})` }}
+														>
+															{' '}
+														</div>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															View <br />Project
+														</div>
+														<div className="project-title">Bee Window</div>
+													</li>
+												</ul>
+											</div>
+										</PortfolioStyles>
+									</FadeIn>
+								</div>
+								<div className="slide">
+									{' '}
+									<FadeIn delay={2000} transitionDuration={2000}>
+										<PortfolioStyles>
+											<div className="section-portfolio">
+									
+												<ul className="portfolio-wrapper">
+													<li className="project-block">
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${gutterhelmet})` }}
+														>
+															{' '}
+														</div>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															{' '}
+															View <br />Project{' '}
+														</div>
+														<div className="project-title">Miami Water & Air</div>
+													</li>
+													<li className="project-block">
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${miami})` }}
+														>
+															{' '}
+														</div>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															View <br />Project
+														</div>
+														<div className="project-title">Miami Water & Air</div>
+													</li>
+												</ul>
+											</div>
+										</PortfolioStyles>
+									</FadeIn>
+								</div>
+							</Slider>
+						</div>
 					</Col>
 				</Row>
 			</Container>

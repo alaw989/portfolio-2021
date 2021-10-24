@@ -195,4 +195,8 @@ export const TitleStyles = styled.div`
 			}
 		}
 	}
+	
+
+
+    
 `;

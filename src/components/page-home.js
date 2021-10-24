@@ -5,14 +5,15 @@ import { Container, Row, Col } from 'react-bootstrap';
 import React from 'react';
 import { opacityContext } from '../contexts/siteContext';
 import { useContext } from 'react';
+import austin from '../img/austin.jpg';
 
 const Home = () => {
 
     const { opacity } = useContext(opacityContext);
   
- 
 	return (
 		<PageStyles opacity={opacity}>
+            <div className="austin-bg" style={{ backgroundImage: `linear-gradient(to left, transparent, #1d1d1d), url(${austin})` }}></div>
 			<Container fluid>
 				<Row className="justify-content-center">
 					<Col xs={11}>
@@ -26,7 +27,6 @@ const Home = () => {
                                     <FadeIn transitionDuration={2000} delay={400} className="letter">I</FadeIn>
                                     <FadeIn transitionDuration={2000} delay={500} className="letter">'</FadeIn>
                                     <FadeIn transitionDuration={2000} delay={600} className="letter margin-r">m </FadeIn>
-
                                     <FadeIn transitionDuration={2000} delay={700} className="letter double">
                                     <div className="double-container">
                                         <div className="letter-1">A</div>
