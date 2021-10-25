@@ -1,15 +1,46 @@
 import styled from 'styled-components';
+import { css } from 'styled-components';
 
 export const PortfolioStyles = styled.div`
 	width: 100%;
-	/* height: 40vw; */
-	max-height: 800px;
-	margin-top: 3em;
+	position: absolute; 
+	top: 0; 
+	overflow: hidden;
+	z-index: 1; 
+	transition: .5s all; 
+	
+	${(props) =>
+		props.opacity &&
+		css`
+			z-index: 1;
+			opacity: 0;
+		`};
+
+	.slide-container {
+		position: relative;
+		.big-text {
+			position: absolute;
+			font-size: 10rem;
+			top: 0;
+			right: 0;
+			font-weight: 700;
+			letter-spacing: -7px;
+			color: rgba(255, 255, 255, .05);
+			z-index: 0;
+			top: -100px;
+			@media (min-width: 992px) {
+				font-size: 20rem;
+				right: -80px;
+				top: -250px;
+			}
+		}
+	}
 
 	.section-portfolio {
 		width: 100%;
-		/* height: 40vw; */
-		/* max-height: 800px; */
+	
+		margin-top: 3em;
+		position: relative;
 		position: relative;
 
 		ul.portfolio-wrapper {
@@ -26,14 +57,14 @@ export const PortfolioStyles = styled.div`
 				align-items: center;
 				list-style-type: none;
 				/* width: 33.33%; */
-				width: 48%;
+				width: 47%;
 				padding: 5vw 0;
 				overflow: hidden;
 				position: relative;
 				cursor: pointer;
 				transform: scale(1);
 				transition: .5s all;
-				border-radius: 15px; 
+				border-radius: 15px;
 				margin: 5px;
 				/* @media (min-width: 768px) {
 					width: 33.33%;
@@ -89,8 +120,7 @@ export const PortfolioStyles = styled.div`
 					transform: scale(1);
 					transition: .5s all;
 					background: rgba(0, 0, 0, .6);
-			
-					padding: 5px 10px;
+					padding: 5px 10px 3px 10px;
 					max-width: 80%;
 				}
 

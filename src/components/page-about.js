@@ -1,4 +1,4 @@
-import { PageStyles } from '../styles/components/_section-body.js';
+import { AboutStyles } from '../styles/components/_section-about.js';
 import { TitleStyles } from '../styles/components/_section-title.js';
 import { DevLogoStyles } from '../styles/components/_section-devlogos.js';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -10,7 +10,7 @@ const About = () => {
 	const { opacity } = useContext(opacityContext);
 
 	return (
-		<PageStyles opacity={opacity}>
+		<AboutStyles>
 			<Container fluid>
 				<Row className="justify-content-center">
 					<Col xs={11}>
@@ -230,7 +230,7 @@ const About = () => {
 					</Col>
 				</Row>
 			</Container>
-		</PageStyles>
+		</AboutStyles>
 	);
 };
 

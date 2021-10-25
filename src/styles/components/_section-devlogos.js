@@ -6,6 +6,10 @@ height: 100%;
     display: flex;
     align-items: center;
 
+    @media (min-width: 992px) {
+        margin-top: 150px;
+    }
+
 .logo-container {
     display: flex; 
     flex-wrap: wrap; 

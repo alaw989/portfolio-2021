@@ -5,16 +5,20 @@ import { TitleStyles } from '../styles/components/_section-title.js';
 import FadeIn from 'react-fade-in/lib/FadeIn';
 import Form from '../components/section-form';
 import { FormStyles } from '../styles/components/_forms.js';
+import { useContext } from 'react';
+import { opacityContext } from '../contexts/siteContext';
 
 const Contact = () => {
+	const { opacity } = useContext(opacityContext);
+
 	return (
-		<ContactStyles>
+		<ContactStyles opacity={opacity}>
+			<div className="map-container desktop">
+				<div className="map-text">Austin Law<br></br> Tampa, FL<br></br><br></br><span>@</span>: alaw989@gmail.com</div>
+				<div className="map-bg" style={{ backgroundImage: `url(${snazzymap})` }} />
+			</div>
+
 			<div className="section-contact">
-            <FadeIn>
-				<div className="map-container">
-					<div className="map-bg" style={{ backgroundImage: `url(${snazzymap})` }} />
-				</div>
-                </FadeIn>
 				<Container fluid>
 					<Row className="justify-content-center">
 						<Col xs={11}>
@@ -92,7 +96,7 @@ const Contact = () => {
 												</div>
 												<FadeIn delay={1000} transitionDuration={2000}>
 													<p className="subtitle">
-														If you have a question or request, don't hesitate to use the
+														I'm always open to new opportunities. If you have a question or request, don't hesitate to use the
 														form.
 													</p>
 												</FadeIn>
@@ -102,6 +106,13 @@ const Contact = () => {
 											<Form />
 										</FormStyles>
 									</div>
+								</Col>
+								<Col xs={12} lg={6}>
+									<FadeIn>
+										<div className="map-container mobile">
+											<div className="map-bg" style={{ backgroundImage: `url(${snazzymap})` }} />
+										</div>
+									</FadeIn>
 								</Col>
 							</Row>
 						</Col>

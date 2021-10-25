@@ -12,6 +12,9 @@ export const SectionNavStyles = styled.div`
 	background-color: #000;
 	opacity: 0;
 	transition: .5s opacity;
+	top: 0;
+    height: 100%;
+
 
 	${(props) =>
 		props.opacity &&

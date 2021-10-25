@@ -17,7 +17,7 @@
 
 body {
   background-color: #1d1d1d !important;
-  
+  background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 2px, transparent 5px);
 }
 
 body:after {
@@ -28,13 +28,14 @@ body:after {
       right:0px;
       bottom:0px;
       z-index:1000;
-      background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 2px, transparent 5px);
+     
       background-size:100% 5px;
       animation: lines 2s ease-out infinite;
       opacity:0.3;
       mix-blend-mode: color-burn;
       pointer-events: none;
       z-index:-1;
+   
 }
 
 

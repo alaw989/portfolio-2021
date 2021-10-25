@@ -2,9 +2,15 @@ import styled from 'styled-components';
 
 export const HeaderStyles = styled.div`
 	position: relative;
-
+	
+	
+	padding: 20px 20px; 
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	
 	.logo {
-		position: absolute;
+	
 		left: 25px;
 		top: 25px;
 		height: 50px;

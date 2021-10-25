@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import { css } from 'styled-components';
 
 export const TitleStyles = styled.div`
+	margin-top: 150px; 
 	.title-container {
-		max-width: 430px;
+	
 		position: relative;
 
-		@media (min-width: 900px) {
+		@media (min-width: 992px) {
 			max-width: 630px;
 		}
 
