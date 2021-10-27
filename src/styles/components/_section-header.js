@@ -4,11 +4,11 @@ export const HeaderStyles = styled.div`
 	position: relative;
 	
 	
-	padding: 20px 20px; 
+	padding: 0px 20px; 
 	display: flex;
     justify-content: space-between;
     align-items: center;
-	
+	height: 100px;
 	.logo {
 	
 		left: 25px;

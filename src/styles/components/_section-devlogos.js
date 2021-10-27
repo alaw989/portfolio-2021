@@ -6,9 +6,7 @@ height: 100%;
     display: flex;
     align-items: center;
 
-    @media (min-width: 992px) {
-        margin-top: 150px;
-    }
+
 
 .logo-container {
     display: flex; 
@@ -26,6 +24,26 @@ height: 100%;
         width: 15vw;
         max-width: 100px;
     }
+
+    @keyframes App-logo-spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+
+        .logo.react {
+            svg {
+                animation: App-logo-spin infinite 20s linear;
+            }
+        }
+		
+
+
+  
 }
 
 

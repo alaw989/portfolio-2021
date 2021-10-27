@@ -9,7 +9,7 @@ export const FormStyles = styled.div`
         .form-row {
             display: flex; 
             justify-content: space-between;
-            input {
+            input:not([type=submit]) {
                 max-width: 49%;
             }
         }
@@ -27,21 +27,21 @@ export const FormStyles = styled.div`
             transition: .5s all;
 
             &:hover {
-                box-shadow: 0 0 0 1px #01ff70;
+                box-shadow: 0 0 0 1px #36F4FF;
             }
 
 
             &:focus {
-                box-shadow: 0 0 0 2px #01ff70;;
+                box-shadow: 0 0 0 2px #36F4FF;;
             }
 		}
 
         input[type=submit] {
-            border: 1px solid #01ff70;
+            border: 1px solid #36F4FF;
             border-radius: 0; 
             background-color: #000;
             padding: 10px 20px; 
-            color: #01ff70;
+            color: #36F4FF;
             font-family: 'Roboto', sans-serif;
             letter-spacing: 2px;
             margin-top: 20px; 
@@ -49,7 +49,7 @@ export const FormStyles = styled.div`
             border-radius: 5px; 
             &:hover {
                 color: #000;
-                background-color: #01ff70;
+                background-color: #36F4FF;
             }
         }
 	}

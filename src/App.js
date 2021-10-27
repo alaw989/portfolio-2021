@@ -5,6 +5,7 @@ import Header from './components/section-header';
 import Home from './components/page-home';
 import Contact from './components/page-contact';
 import About from './components/page-about';
+import Footer from './components/section-footer';
 import Portfolio from './components/page-portfolio';
 import { Route, HashRouter } from 'react-router-dom';
 import { opacityContext } from './contexts/siteContext';
@@ -32,6 +33,7 @@ function App() {
 					<Route path="/contact" component={Contact} />
 				</HashRouter>
 			</opacityContext.Provider>
+			<Footer/>
 		</div>
 	);
 }

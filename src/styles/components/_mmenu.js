@@ -15,7 +15,7 @@ export const MmenuStyles = styled.div`
         font-size: .8rem;
         text-transform: uppercase;
         &:hover {
-            color: #01ff70;
+            color: #36F4FF;
         }
 	}
 `;

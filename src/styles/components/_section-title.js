@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { css } from 'styled-components';
 
 export const TitleStyles = styled.div`
-	margin-top: 150px; 
+
 	.title-container {
 	
 		position: relative;
@@ -93,7 +93,7 @@ export const TitleStyles = styled.div`
 					transition: .5s all;
 
 					&:hover {
-						color: #01ff70;
+						color: #36F4FF;
 					}
 
 					&.margin-r {
@@ -129,7 +129,7 @@ export const TitleStyles = styled.div`
                             height: 70px;
 						}
 						.letter-1 {
-							color: #01ff70;
+							color: #36F4FF;
 							position: absolute;
 						}
 						.letter-2 {
@@ -145,7 +145,7 @@ export const TitleStyles = styled.div`
 				props.internal &&
 				css`
 					h1.title {
-						color: #01ff70;
+						color: #36F4FF;
 					}
 				`};
 		}

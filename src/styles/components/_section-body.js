@@ -5,8 +5,8 @@ export const PageStyles = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
-	position: absolute;
+	height: calc(100% - 150px);
+
 	width: 100%;
 	top: 0;
 	z-index: 2;

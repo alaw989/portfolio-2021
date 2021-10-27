@@ -13,14 +13,13 @@ export const SectionNavStyles = styled.div`
 	opacity: 0;
 	transition: .5s opacity;
 	top: 0;
-    height: 100%;
 
 
 	${(props) =>
 		props.opacity &&
 		css`
 			opacity: 1;
-	
+			position: fixed; 
 			z-index: 2;
 		`};
 
@@ -49,17 +48,17 @@ export const SectionNavStyles = styled.div`
             }
 			a {
 				display: flex;
-				color: #fff;
+				color: #fff !important;
 				text-decoration: none;
 				transition: .5s all;
 				font-size: 3rem;
                
 				&:hover {
-					color: #01ff70;
+					color: #36F4FF !important;
 				}
 
 				&.active {
-					color: #01ff70;
+					color: #36F4FF;
 				}
 
                 .letter {

@@ -30,63 +30,63 @@ const Contact = () => {
 												<div className="title-wrapper">
 													<h1 className="title">
 														<FadeIn
-															transitionDuration={2000}
+															transitionDuration={1000}
 															delay={100}
 															className="letter"
 														>
 															C
 														</FadeIn>
 														<FadeIn
-															transitionDuration={2000}
+															transitionDuration={1000}
 															delay={200}
 															className="letter"
 														>
 															o
 														</FadeIn>
 														<FadeIn
-															transitionDuration={2000}
+															transitionDuration={1000}
 															delay={300}
 															className="letter "
 														>
 															n
 														</FadeIn>
 														<FadeIn
-															transitionDuration={2000}
+															transitionDuration={1000}
 															delay={400}
 															className="letter"
 														>
 															t
 														</FadeIn>
 														<FadeIn
-															transitionDuration={2000}
+															transitionDuration={1000}
 															delay={500}
 															className="letter"
 														>
 															a
 														</FadeIn>
 														<FadeIn
-															transitionDuration={2000}
+															transitionDuration={1000}
 															delay={600}
 															className="letter "
 														>
 															c
 														</FadeIn>
 														<FadeIn
-															transitionDuration={2000}
+															transitionDuration={1000}
 															delay={700}
 															className="letter margin-r"
 														>
 															t
 														</FadeIn>
 														<FadeIn
-															transitionDuration={2000}
+															transitionDuration={1000}
 															delay={800}
 															className="letter"
 														>
 															M
 														</FadeIn>
 														<FadeIn
-															transitionDuration={2000}
+															transitionDuration={1000}
 															delay={900}
 															className="letter"
 														>
@@ -94,7 +94,7 @@ const Contact = () => {
 														</FadeIn>
 													</h1>
 												</div>
-												<FadeIn delay={1000} transitionDuration={2000}>
+												<FadeIn delay={1000} transitionDuration={1000}>
 													<p className="subtitle">
 														I'm always open to new opportunities. If you have a question or request, don't hesitate to use the
 														form.

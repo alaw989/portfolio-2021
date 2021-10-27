@@ -8,34 +8,45 @@
 
 .App {
   text-align: center;
-
   position: relative; 
- 
+  height: 100%;
 }
 
+html,body {
+  overflow: auto;
+}
 
+html {
+  min-height: 100%; 
+}
 
 body {
   background-color: #1d1d1d !important;
-  background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 2px, transparent 5px);
+  min-height: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
 }
 
 body:after {
   content: '';
-      position: absolute;
-      top:0px;
-      left:0px;
-      right:0px;
-      bottom:0px;
-      z-index:1000;
-     
-      background-size:100% 5px;
-      animation: lines 2s ease-out infinite;
-      opacity:0.3;
-      mix-blend-mode: color-burn;
-      pointer-events: none;
+  position: absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  z-index:1000;
+  background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 2px, transparent 5px);
+  background-size:100% 5px;
+  animation: lines 2s ease-out infinite;
+  opacity:0.3;
+  mix-blend-mode: color-burn;
+  pointer-events: none;
       z-index:-1;
-   
 }
 
 

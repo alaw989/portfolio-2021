@@ -4,11 +4,13 @@ import { css } from 'styled-components';
 export const ContactStyles = styled.div`
 	display: flex;
 	align-items: center;
-	position: absolute;
 	top: 0;
 	transition: .5s all;
 	width: 100%;
-	height: 100vh;
+	position: relative;
+	height: calc(100% - 150px);
+	min-height: 1000px;
+
 
 	${(props) =>
 		props.opacity &&
@@ -20,7 +22,7 @@ export const ContactStyles = styled.div`
 	.map-container {
 		width: 100%;
 		position: absolute;
-
+		height: 400px;
 		&.mobile {
 			display: block;
 			position: relative;
@@ -54,7 +56,7 @@ export const ContactStyles = styled.div`
 			text-align: left;
 			font-family: 'Roboto', sans-serif;
 			span {
-				color: #01ff70;
+				color: #36F4FF;
 			}
 		}
 
@@ -62,7 +64,7 @@ export const ContactStyles = styled.div`
 			position: absolute;
 			top: 0;
 			right: 0;
-			height: 50vh;
+			height: 100%;
 			width: 100%;
 			background-size: cover;
 			background-repeat: no-repeat;
