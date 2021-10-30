@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { opacityContext } from '../contexts/siteContext';
 import { useContext } from 'react';
 import FadeIn from 'react-fade-in';
-import { Link } from 'react-router-dom';
+
 
 const About = () => {
 	const { opacity } = useContext(opacityContext);
@@ -14,10 +14,10 @@ const About = () => {
 		<AboutStyles opacity={opacity}>
 			<Container fluid>
 				<Row className="justify-content-center">
-					<Col xs={11}>
+					<Col xs={11} md={10} lg={12}>
 						<Row>
-							<Col xs={12} lg={6}>
-								<TitleStyles internal>
+							<Col xs={12}  lg={6}>
+								<TitleStyles internal about>
 									<div className="title-container">
 										<div className="title-wrapper">
 											<h1 className="title">
@@ -86,7 +86,7 @@ const About = () => {
 												>
 													LinkedIn
 												</a>{' '}
-												profile for more details or just <Link to="/contact">contact </Link>me.
+												profile for more details or just contact me.
 											</p>
 										</FadeIn>
 									</div>

@@ -8,13 +8,19 @@ export const PortfolioStyles = styled.div`
 	overflow: hidden;
 	z-index: 1;
 	transition: .5s all;
-	
+	padding: 80px 0; 
 	min-height: 1000px;
 	z-index: 1;
+
+	@media (min-width: 768px) {
+		padding: 100px 0; 
+	}
 
 	@media (min-width: 992px) {
 		min-height: 0;
 	}
+
+
 
 	${(props) =>
 		props.opacity &&
@@ -45,21 +51,26 @@ export const PortfolioStyles = styled.div`
 
 	.section-portfolio {
 		width: 100%;
-
-		margin-top: 3em;
-		position: relative;
-		position: relative;
-
+    margin-top: 3em;
+    position: relative;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+		
 		ul.portfolio-wrapper {
 			display: flex;
 			flex-wrap: wrap;
 			/* height: 40vw; */
 			/* max-height: 800px; */
 			padding: 0;
-			justify-content: center;
+			justify-content: space-between;
 			a {
-				width:100%;
-				max-width: 400px;
+				width: 100%;
+
+				@media (min-width: 768px) {
+					width: 49%;
+				}
+				
 				li.project-block {
 					display: flex;
 					justify-content: center;
@@ -73,7 +84,7 @@ export const PortfolioStyles = styled.div`
 					transform: scale(1);
 					transition: .5s all;
 					border-radius: 15px;
-					margin: 5px;
+					margin-bottom: 10px;
 
 					&:hover {
 						.hover-container {

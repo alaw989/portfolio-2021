@@ -8,10 +8,20 @@ export const AboutStyles = styled.div`
 	height: calc(100% - 150px);
 	min-height: 1000px;
 	z-index: 1;
+	padding: 80px 0px;
+	max-width: 900px;
+	margin-left: auto; 
+	margin-right: auto; 
+
+	@media (min-width: 768px) {
+		padding: 100px 0; 
+	}
 
 	@media (min-width: 992px) {
 		min-height: 0;
 	}
+
+
 
 	${(props) =>
 		props.opacity &&

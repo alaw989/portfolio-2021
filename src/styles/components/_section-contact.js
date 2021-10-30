@@ -8,9 +8,16 @@ export const ContactStyles = styled.div`
 	transition: .5s all;
 	width: 100%;
 	position: relative;
-	height: calc(100% - 150px);
-	min-height: 1000px;
+	padding: 80px 0; 
+	margin-bottom: 50px; 
+	max-width: 600px; 
+	margin-left: auto; 
+	margin-right: auto; 
 
+	@media (min-width: 768px) {
+		padding: 100px 0; 
+		margin-bottom: 100px; 
+	}
 
 	${(props) =>
 		props.opacity &&
@@ -19,7 +26,14 @@ export const ContactStyles = styled.div`
 			opacity: 0;
 		`};
 
-	.map-container {
+		h1.title {
+			justify-content: center;
+		}
+		h1.title:after {
+			display: none !important; 
+		}
+
+	/* .map-container {
 		width: 100%;
 		position: absolute;
 		height: 400px;
@@ -74,7 +88,7 @@ export const ContactStyles = styled.div`
 				height: 100%;
 			}
 		}
-	}
+	} */
 	.section-contact {
 		color: #fff;
 		height: 100%;
@@ -87,11 +101,27 @@ export const ContactStyles = styled.div`
 			justify-content: center;
 			position: relative;
 			z-index: 1;
-			align-items: flex-start;
+			align-items: center;
 			height: 100%;
-			@media (min-width: 992px) {
-				margin-right: 50px;
-			}
+		
+		}
+
+		.contact-button {
+			border: 1px solid #36F4FF;
+            border-radius: 0; 
+            background-color: #000;
+            padding: 10px 20px; 
+            color: #36F4FF;
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: 2px;
+            margin-top: 20px; 
+            transition: .5s all;
+            border-radius: 5px; 
+			background-color: #1d1d1d;
+            &:hover {
+                color: #000;
+                background-color: #36F4FF;
+            }
 		}
 	}
 `;

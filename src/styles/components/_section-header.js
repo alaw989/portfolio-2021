@@ -1,16 +1,15 @@
 import styled from 'styled-components';
 
 export const HeaderStyles = styled.div`
-	position: relative;
-	
-	
-	padding: 0px 20px; 
+	position: fixed;
+	width: 100%;
+	padding: 20px 40px;
 	display: flex;
-    justify-content: space-between;
-    align-items: center;
+	justify-content: space-between;
+	align-items: center;
 	height: 100px;
-	.logo {
 	
+	.logo {
 		left: 25px;
 		top: 25px;
 		height: 50px;
@@ -21,8 +20,6 @@ export const HeaderStyles = styled.div`
 		.text,
 		.text > * {
 			position: absolute;
-		
-			
 			transform: translate(-50%, -50%);
 			z-index: 3;
 			font-family: 'Roboto', sans-serif;

@@ -32,8 +32,8 @@ const Portfolio = () => {
 		<PortfolioStyles opacity={opacity}>
 			<Container fluid>
 				<Row className="justify-content-center">
-					<Col xs={11}>
-						<TitleStyles internal>
+					<Col xs={11} md={10} lg={9}>
+						<TitleStyles internal portfolio>
 							<div className="title-container">
 								<div className="title-wrapper">
 									<h1 className="title">
@@ -77,8 +77,7 @@ const Portfolio = () => {
 								</FadeIn>
 							</div>
 						</TitleStyles>
-					</Col>
-					<Col xs={10} className="p-0">
+		
 						<FadeIn delay={1500} transitionDuration={1000}>
 							<PortfolioNavStyles opacity={opacity}>
 								<ul className="nav-container">

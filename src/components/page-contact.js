@@ -1,10 +1,7 @@
 import { ContactStyles } from '../styles/components/_section-contact.js';
-import snazzymap from '../img/snazzy-image.png';
 import { Col, Row, Container } from 'react-bootstrap';
 import { TitleStyles } from '../styles/components/_section-title.js';
 import FadeIn from 'react-fade-in/lib/FadeIn';
-import Form from '../components/section-form';
-import { FormStyles } from '../styles/components/_forms.js';
 import { useContext } from 'react';
 import { opacityContext } from '../contexts/siteContext';
 
@@ -13,21 +10,17 @@ const Contact = () => {
 
 	return (
 		<ContactStyles opacity={opacity}>
-			<div className="map-container desktop">
-				<div className="map-text">Austin Law<br></br> Tampa, FL<br></br><br></br><span>@</span>: alaw989@gmail.com</div>
-				<div className="map-bg" style={{ backgroundImage: `url(${snazzymap})` }} />
-			</div>
-
 			<div className="section-contact">
 				<Container fluid>
 					<Row className="justify-content-center">
 						<Col xs={11}>
 							<Row>
-								<Col xs={12} lg={6}>
+								<Col xs={12} lg={12}>
 									<div className="form-container">
-										<TitleStyles internal>
+										<TitleStyles internal contact>
 											<div className="title-container">
 												<div className="title-wrapper">
+													<div className="sup-title">What's Next?</div>
 													<h1 className="title">
 														<FadeIn
 															transitionDuration={1000}
@@ -96,23 +89,17 @@ const Contact = () => {
 												</div>
 												<FadeIn delay={1000} transitionDuration={1000}>
 													<p className="subtitle">
-														I'm always open to new opportunities. If you have a question or request, don't hesitate to use the
-														form.
+														I'm currently open to any new opportunities, my inbox is always
+														open. Whether you have a question or just want to say hi, I’ll
+														try my best to get back to you!
 													</p>
 												</FadeIn>
 											</div>
 										</TitleStyles>
-										<FormStyles>
-											<Form />
-										</FormStyles>
+										<a className="contact-button" href="mailto:alaw989@gmail.com">
+											Say Hello
+										</a>
 									</div>
-								</Col>
-								<Col xs={12} lg={6}>
-									<FadeIn>
-										<div className="map-container mobile">
-											<div className="map-bg" style={{ backgroundImage: `url(${snazzymap})` }} />
-										</div>
-									</FadeIn>
 								</Col>
 							</Row>
 						</Col>

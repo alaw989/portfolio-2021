@@ -2,18 +2,29 @@ import styled from 'styled-components';
 import { css } from 'styled-components';
 
 export const TitleStyles = styled.div`
-
 	.title-container {
-	
 		position: relative;
 
 		@media (min-width: 992px) {
 			max-width: 630px;
 		}
 
+		${(props) =>
+			props.contact &&
+			css`
+				h1.title {
+					text-align: center !important;
+					font-size: 2.7rem !important;
+				}
+
+				.subtitle {
+					text-align: center;
+				}
+			`};
+
 		.title-wrapper {
 			position: relative;
-			&:before {
+			/* &:before {
 				content: '<h1>';
 				font-family: 'La Belle Aurore', cursive;
 				color: #515152;
@@ -31,31 +42,107 @@ export const TitleStyles = styled.div`
 				position: absolute;
 				left: -10px;
 				bottom: 10px;
+			} */
+
+			.sup-title {
+				font-family: 'Roboto Mono', sans-serif;
+				&:before {
+					content: "03.";
+					position: relative;
+					font-family: 'Roboto Mono', sans-serif;
+					color: #36f4ff;
+			
+					font-weight: 600;
+					margin-right: 10px;
+
+					@media (min-width: 992px) {
+					
+					}
+				}
 			}
+
 			h1.title {
 				color: #fff;
 				text-align: left;
-				font-size: 3.5rem;
-				line-height: 3.5rem;
+				font-size: 1.7rem;
+				line-height: 4rem;
 				position: relative;
 				width: 100%;
 				white-space: nowrap;
-                font-family: 'Roboto', sans-serif;
-                font-weight: 700;
-          
+				font-family: 'Roboto', sans-serif;
+				font-weight: 700;
 				overflow: hidden;
-				letter-spacing: -4px;
-				padding: 30px 0;
+				letter-spacing: 0px;
 
-				@media (min-width: 900px) {
-					font-size: 5rem;
-					line-height: 5rem;
-					max-width: 630px;
+				${(props) =>
+					props.internal &&
+					css`
+						& {
+							display: flex;
+							align-items: center;
+						}
+
+						&:before {
+							position: relative;
+							font-family: 'Roboto Mono', sans-serif;
+							color: #36f4ff;
+							font-size: 1.3rem;
+							font-weight: 600;
+							margin-right: 10px;
+
+							@media (min-width: 992px) {
+								bottom: -4px;
+							}
+						}
+					`};
+
+				${(props) =>
+					props.about &&
+					css`
+						&:before {
+							content: "01.";
+
+							@media (min-width: 992px) {
+								bottom: -4px;
+							}
+						}
+					`};
+
+				${(props) =>
+					props.portfolio &&
+					css`
+						&:before {
+							content: "02.";
+
+							@media (min-width: 992px) {
+								bottom: -4px;
+							}
+						}
+					`};
+
+				&:after {
+					content: "";
+					display: block;
+					position: relative;
+					top: -5px;
+					width: 300px;
+					height: 1px;
+					margin-left: 20px;
+					background-color: #292929;
+					margin-top: 8px;
 				}
 
 				@media (min-width: 1100px) {
-					font-size: 5.3rem;
+					font-size: 2.1rem;
 					line-height: 5rem;
+
+					${(props) =>
+						props.hero &&
+						css`
+							& {
+								font-size: 5.3rem;
+							}
+						`};
 				}
 
 				@keyframes rubberBand {
@@ -93,11 +180,11 @@ export const TitleStyles = styled.div`
 					transition: .5s all;
 
 					&:hover {
-						color: #36F4FF;
+						color: #36f4ff;
 					}
 
 					&.margin-r {
-						margin-right: 15px;
+						margin-right: 8px;
 					}
 					&:not(.double) {
 						div {
@@ -106,7 +193,7 @@ export const TitleStyles = styled.div`
 							animation-fill-mode: both;
 							animation-iteration-count: 1;
 							transition: .5s all;
-                 
+
 							&:hover {
 								-webkit-animation-name: rubberBand;
 								animation-name: rubberBand;
@@ -116,20 +203,20 @@ export const TitleStyles = styled.div`
 
 					.double-container {
 						position: relative;
-                        width: 41px;
-                        height: 47px;
+						width: 41px;
+						height: 47px;
 
 						@media (min-width: 900px) {
 							width: 55px;
 							height: 68px;
 						}
 
-                        @media (min-width: 1100px) {
-						    width: 56px;
-                            height: 70px;
+						@media (min-width: 1100px) {
+							width: 56px;
+							height: 70px;
 						}
 						.letter-1 {
-							color: #36F4FF;
+							color: #36f4ff;
 							position: absolute;
 						}
 						.letter-2 {
@@ -145,7 +232,7 @@ export const TitleStyles = styled.div`
 				props.internal &&
 				css`
 					h1.title {
-						color: #36F4FF;
+						color: #fff;
 					}
 				`};
 		}
@@ -157,10 +244,11 @@ export const TitleStyles = styled.div`
 		position: relative;
 		letter-spacing: 3px;
 		font-size: .9rem;
-		margin-top: 20px;
-        font-family: 'Raleway', sans-serif;
+
+		font-family: 'Raleway', sans-serif;
+
 		@media (min-width: 900px) {
-			font-size: 1.1rem;
+			font-size: 1rem;
 		}
 
 		${(props) =>
@@ -172,7 +260,7 @@ export const TitleStyles = styled.div`
 				}
 			`};
 
-		&:before {
+		/* &:before {
 			content: '<p>';
 			font-family: 'La Belle Aurore', cursive;
 			color: #515152;
@@ -194,10 +282,6 @@ export const TitleStyles = styled.div`
 			@media (min-width: 1100px) {
 				left: -10px;
 			}
-		}
+		} */
 	}
-	
-
-
-    
 `;

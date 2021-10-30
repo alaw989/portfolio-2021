@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import React from 'react';
 import { opacityContext } from '../contexts/siteContext';
 import { useContext } from 'react';
-import austin from '../img/austin.jpg';
+import pluto from '../img/pluto.png';
 
 const Home = () => {
 
@@ -13,11 +13,11 @@ const Home = () => {
   
 	return (
 		<PageStyles opacity={opacity}>
-            {/* <div className="austin-bg" style={{ backgroundImage: `linear-gradient(to left, transparent, #1d1d1d), url(${austin})` }}></div> */}
+            <div className="austin-bg" style={{ backgroundImage: `linear-gradient(to left, transparent, #1d1d1d), url(${pluto})` }}></div>
 			<Container fluid>
 				<Row className="justify-content-center">
-					<Col xs={11}>
-                        <TitleStyles>
+					<Col xs={11} md={10} lg={9}>
+                        <TitleStyles hero>
                         <div className="title-container">
                                 <div className="title-wrapper">
                                     <h1 className="title">

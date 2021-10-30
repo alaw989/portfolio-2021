@@ -5,8 +5,8 @@ export const PageStyles = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: calc(100% - 150px);
-
+	min-height: 100vh;
+	position: relative;
 	width: 100%;
 	top: 0;
 	z-index: 2;
@@ -24,6 +24,18 @@ export const PageStyles = styled.div`
 		opacity: .09;
 		background-color: #1d1d1d;
 		background-position: 25%;
+		mix-blend-mode: hard-light;
+
+		&:after {
+			position: absolute;
+			content: "";
+			left: 0px;
+			top: 0px;
+			height: 100%;
+			width: 100%;
+			background: linear-gradient(transparent, #282626);
+			pointer-events: none;
+		}
 
 		@media (min-width: 768px) {
 			background-position: 20%;
@@ -38,8 +50,6 @@ export const PageStyles = styled.div`
 			background-position: 200%;
 		}
 	}
-
-
 
 	${(props) =>
 		props.opacity &&
