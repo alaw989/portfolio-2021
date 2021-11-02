@@ -8,7 +8,7 @@ import About from './components/page-about';
 import Footer from './components/section-footer';
 import Portfolio from './components/page-portfolio';
 import Fixed from './components/section-fixed';
-import Fixed2 from './components/section-fixed2';
+import SocialBar from './components/section-socialbar'
 import { Route, HashRouter } from 'react-router-dom';
 import { opacityContext } from './contexts/siteContext';
 import { useState } from 'react';
@@ -40,7 +40,7 @@ function App() {
 			</opacityContext.Provider>
 			<Footer/>
 			<Fixed/>
-			<Fixed2/>
+			<SocialBar/>
 		</div>
 	);
 }
