@@ -13,36 +13,36 @@ const SectionNav = () => {
 
 	return (
 		<SectionNavStyles opacity={opacity}>
-			{/* <HashRouter> */}
+			<HashRouter>
             {opacity &&
 				<ul>
                     <li onClick={changeOpacity}>
-                        {/* <NavLink exact to="/"> */}
+                        <a href="#home">
                             <FadeIn transitionDuration={1000} delay={100} className="letter">H</FadeIn>
                             <FadeIn transitionDuration={1000} delay={200} className="letter">o</FadeIn>
                             <FadeIn transitionDuration={1000} delay={300} className="letter">m</FadeIn>
                             <FadeIn transitionDuration={1000} delay={400} className="letter">e</FadeIn>
-                        {/* </NavLink> */}
+                        </a>
                     </li>
                     <li onClick={changeOpacity}>
-                        {/* <NavLink to="/about"> */}
+                        <a href="#about">
                             <FadeIn transitionDuration={1000} delay={100} className="letter">A</FadeIn>
                             <FadeIn transitionDuration={1000} delay={200} className="letter">b</FadeIn>
                             <FadeIn transitionDuration={1000} delay={300} className="letter">o</FadeIn>
                             <FadeIn transitionDuration={1000} delay={400} className="letter">u</FadeIn>
                             <FadeIn transitionDuration={1000} delay={500} className="letter">t</FadeIn>
-                        {/* </NavLink> */}
+                        </a>
                     </li>
 					<li onClick={changeOpacity}>
-                        {/* <NavLink to="/portfolio"> */}
+                        <a href="#portfolio">
                             <FadeIn transitionDuration={1000} delay={100} className="letter">W</FadeIn>
                             <FadeIn transitionDuration={1000} delay={200} className="letter">o</FadeIn>
                             <FadeIn transitionDuration={1000} delay={300} className="letter">r</FadeIn>
                             <FadeIn transitionDuration={1000} delay={400} className="letter">k</FadeIn>
-                        {/* </NavLink> */}
+                        </a>
 					</li>
 					<li onClick={changeOpacity}>
-                        {/* <NavLink to="/contact"> */}
+                        <a href="#contact">
                             <FadeIn transitionDuration={1000} delay={100} className="letter">C</FadeIn>
                             <FadeIn transitionDuration={1000} delay={200} className="letter">o</FadeIn>
                             <FadeIn transitionDuration={1000} delay={300} className="letter">n</FadeIn>
@@ -50,11 +50,11 @@ const SectionNav = () => {
                             <FadeIn transitionDuration={1000} delay={500} className="letter">a</FadeIn>
                             <FadeIn transitionDuration={1000} delay={600} className="letter">c</FadeIn>
                             <FadeIn transitionDuration={1000} delay={700} className="letter">t</FadeIn>
-                        {/* </NavLink> */}
+                        </a>
 					</li>
 				</ul>
                   }
-			{/* </HashRouter> */}
+			</HashRouter>
 		</SectionNavStyles>
 	);
 };

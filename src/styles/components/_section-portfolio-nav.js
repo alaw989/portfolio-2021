@@ -25,10 +25,10 @@ export const PortfolioNavStyles = styled.div`
 			list-style-type: none;
 			color: #fff;
 			margin: 0 10px;
-			font-family: 'Roboto', sans-serif;
+			font-family: 'Raleway', sans-serif;
 			cursor: pointer;
 			font-weight: 500;
-			letter-spacing: 2px;
+			letter-spacing: 1px;
 			transition: .5s all;
 			padding: 10px;
 			&:hover {

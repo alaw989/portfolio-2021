@@ -8,6 +8,7 @@ export const HeaderStyles = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	height: 100px;
+	z-index: 3; 
 	
 	.logo {
 		left: 25px;

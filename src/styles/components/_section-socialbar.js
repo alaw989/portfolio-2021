@@ -33,6 +33,16 @@ export const SocialBarStyles = styled.div`
 		a {
 			color: #fff;
             margin-bottom: 25px; 
+            transition: .5s all;
+            &:hover {
+                color: #36f4ff !important;
+                transform: translateY(-5px);
+                svg {
+                    g {
+                        fill: #36f4ff;
+                    }
+                }
+            }
 			svg {
                 width: 20px;
 				g {

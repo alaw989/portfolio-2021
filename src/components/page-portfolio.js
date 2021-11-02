@@ -34,7 +34,7 @@ const Portfolio = () => {
 				<Row className="justify-content-center">
 					<Col xs={11} md={10} lg={9}>
 						<TitleStyles internal portfolio>
-							<div className="title-container">
+							<div className="title-container" id="portfolio">
 								<div className="title-wrapper">
 									<h1 className="title">
 										<FadeIn transitionDuration={1000} delay={100} className="letter">

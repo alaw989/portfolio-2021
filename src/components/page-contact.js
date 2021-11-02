@@ -10,7 +10,7 @@ const Contact = () => {
 
 	return (
 		<ContactStyles opacity={opacity}>
-			<div className="section-contact">
+			<div className="section-contact" id="contact">
 				<Container fluid>
 					<Row className="justify-content-center">
 						<Col xs={11}>
@@ -89,8 +89,7 @@ const Contact = () => {
 												</div>
 												<FadeIn delay={1000} transitionDuration={1000}>
 													<p className="subtitle">
-														I'm currently open to any new opportunities, my inbox is always
-														open. Whether you have a question or just want to say hi, I’ll
+														I'm currently open to any new opportunities. Whether you have a question or just want to say hi, I’ll
 														try my best to get back to you!
 													</p>
 												</FadeIn>

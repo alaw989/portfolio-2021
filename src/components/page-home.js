@@ -13,7 +13,7 @@ const Home = () => {
   
 	return (
 		<PageStyles opacity={opacity}>
-            <div className="austin-bg" style={{ backgroundImage: `linear-gradient(to left, transparent, #1d1d1d), url(${pluto})` }}></div>
+            <div className="austin-bg"  id="home" style={{ backgroundImage: `linear-gradient(to left, transparent, #1d1d1d), url(${pluto})` }}></div>
 			<Container fluid>
 				<Row className="justify-content-center">
 					<Col xs={11} md={10} lg={9}>

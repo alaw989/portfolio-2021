@@ -38,7 +38,7 @@ const SocialBar = () => {
 						<line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
 					</svg>
 				</a>
-				<a href="https://www.linkedin.com/in/bchiang7" aria-label="Linkedin" target="_blank" rel="noreferrer">
+				<a href="https://www.linkedin.com/in/austin-law-6496487b/" aria-label="Linkedin" target="_blank" rel="noreferrer">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						role="img"

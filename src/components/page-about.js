@@ -18,7 +18,7 @@ const About = () => {
 						<Row>
 							<Col xs={12}  lg={6}>
 								<TitleStyles internal about>
-									<div className="title-container">
+									<div className="title-container" id="about">
 										<div className="title-wrapper">
 											<h1 className="title">
 												<FadeIn transitionDuration={1000} delay={100} className="letter">
@@ -78,16 +78,16 @@ const About = () => {
 												What I enjoy doing the most though is interacting with and manipulating
 												data through APIs. I would love to work on more data driven websites and
 												applications. <br /> <br />
-												Visit my{' '}
-												<a
-													href="https://www.linkedin.com/in/austin-law-6496487b/"
-													target="_blank"
-													rel="noreferrer"
-												>
-													LinkedIn
-												</a>{' '}
-												profile for more details or just contact me.
-											</p>
+												Here are a few technologis I've beeen working with recently: 
+												</p>
+												<ul className="skills-list">
+													<li>JavaScript (ES6+)</li>
+													<li>React</li>
+													<li>GraphQL</li>
+													<li>Wordpress</li>
+													<li>Styled Components</li>
+												</ul>
+										
 										</FadeIn>
 									</div>
 								</TitleStyles>

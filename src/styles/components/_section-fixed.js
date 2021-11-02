@@ -3,7 +3,7 @@ import css from 'styled-components';
 
 export const FixedStyles = styled.div`
 	position: fixed;
-	bottom: 0;
+	bottom: -5px;
 	right: 0;
 	color: white;
 	display: none;
@@ -27,6 +27,7 @@ export const FixedStyles = styled.div`
             transform: rotate(90deg);
 			&:hover {
 				color: #36f4ff;
+				margin-bottom: 5px; 
 			}
 
 			&:after {
