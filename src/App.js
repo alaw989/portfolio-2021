@@ -8,11 +8,12 @@ import About from './components/page-about';
 import Footer from './components/section-footer';
 import Portfolio from './components/page-portfolio';
 import Fixed from './components/section-fixed';
-import SocialBar from './components/section-socialbar'
+import SocialBar from './components/section-socialbar';
 import { Route, HashRouter } from 'react-router-dom';
 import { opacityContext } from './contexts/siteContext';
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import pluto from './img/pluto.png';
 
 function App() {
 	const [ opacity, setOpacity ] = useState();
@@ -27,7 +28,7 @@ function App() {
 			>
 				<Header />
 				<SectionNav />
-				<Home/>
+				<Home />
 				<About />
 				<Portfolio />
 				<Contact />
@@ -38,9 +39,10 @@ function App() {
 					<Route path="/contact" component={Contact} />
 				</HashRouter> */}
 			</opacityContext.Provider>
-			<Footer/>
-			<Fixed/>
-			<SocialBar/>
+			<Footer />
+			<Fixed />
+			<SocialBar />
+			<div className="fixed-bottom-bg" style={{ backgroundImage: `url(${pluto})` }}></div>
 		</div>
 	);
 }

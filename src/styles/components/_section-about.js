@@ -10,18 +10,16 @@ export const AboutStyles = styled.div`
 	z-index: 1;
 	padding: 80px 0px;
 	max-width: 900px;
-	margin-left: auto; 
-	margin-right: auto; 
+	margin-left: auto;
+	margin-right: auto;
 
 	@media (min-width: 768px) {
-		padding: 100px 0; 
+		padding: 100px 0;
 	}
 
 	@media (min-width: 992px) {
 		min-height: 0;
 	}
-
-
 
 	${(props) =>
 		props.opacity &&
@@ -41,7 +39,34 @@ export const AboutStyles = styled.div`
 				}
 			}
 		}
+
+		ul.skills-list {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(140px, 200px));
+			gap: 0px 10px;
+			padding: 0px;
+			margin: 20px 0px 0px;
+			overflow: hidden;
+			list-style: none;
+			li {
+				font-family: 'Roboto Mono', sans-serif;
+				font-size: 13px;
+				margin-bottom: 5px; 
+				color: #fff;
+				display: flex;
+				justify-content: flex-start;
+				padding-left: 12px;
+				position: relative;
+				&:before {
+					content: "▹";
+					position: absolute;
+					left: -2px;
+					color: #36f4ff;
+					font-size: 12px;
+					line-height: 12px;
+					top: 2px;
+				}
+			}
+		}
 	}
-
-
 `;

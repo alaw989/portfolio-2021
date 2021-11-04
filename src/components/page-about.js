@@ -78,7 +78,7 @@ const About = () => {
 												What I enjoy doing the most though is interacting with and manipulating
 												data through APIs. I would love to work on more data driven websites and
 												applications. <br /> <br />
-												Here are a few technologis I've beeen working with recently: 
+												Here are a few technologies I've been working with recently: 
 												</p>
 												<ul className="skills-list">
 													<li>JavaScript (ES6+)</li>

@@ -2,12 +2,23 @@ import styled from 'styled-components';
 import { css } from 'styled-components';
 
 export const TitleStyles = styled.div`
-	.title-container {
-		position: relative;
+	${(props) =>
+		props.portfolio &&
+		css`
+			max-width: 1100px;
+			margin: 0 auto;
+		`};
 
-		@media (min-width: 992px) {
-			max-width: 630px;
-		}
+	
+		${(props) =>
+			props.hero &&
+			css`
+			max-width: 1000px;
+				.subtitle {
+					text-align: left;
+					max-width: 540px;
+				}
+			`};
 
 		${(props) =>
 			props.contact &&
@@ -19,30 +30,20 @@ export const TitleStyles = styled.div`
 
 				.subtitle {
 					text-align: center;
+					max-width: 100%;
 				}
 			`};
 
-		.title-wrapper {
-			position: relative;
-			/* &:before {
-				content: '<h1>';
-				font-family: 'La Belle Aurore', cursive;
-				color: #515152;
-				font-size: 1rem;
-				position: absolute;
-				left: -10px;
-				top: -5px;
-			}
+		${(props) =>
+			props.about &&
+			css`
+				.subtitle {
+					text-align: left;
+				}
+			`}
 
-			&:after {
-				content: '</h1>';
-				font-family: 'La Belle Aurore', cursive;
-				color: #515152;
-				font-size: 1rem;
-				position: absolute;
-				left: -10px;
-				bottom: 10px;
-			} */
+	
+	
 
 			.sup-title {
 				font-family: 'Roboto Mono', sans-serif;
@@ -51,21 +52,27 @@ export const TitleStyles = styled.div`
 					position: relative;
 					font-family: 'Roboto Mono', sans-serif;
 					color: #36f4ff;
-			
+
 					font-weight: 600;
 					margin-right: 10px;
 
 					@media (min-width: 992px) {
-					
 					}
 				}
+			}
+
+			.suptitle {
+				text-align: left;
+				color: #fff;
+				font-family: 'Roboto Mono', sans-serif;
+				color: #36f4ff;
 			}
 
 			h1.title {
 				color: #fff;
 				text-align: left;
 				font-size: 1.7rem;
-				line-height: 4rem;
+				line-height: 5rem;
 				position: relative;
 				width: 100%;
 				white-space: nowrap;
@@ -73,6 +80,26 @@ export const TitleStyles = styled.div`
 				font-weight: 700;
 				overflow: hidden;
 				letter-spacing: 0px;
+
+				&.home {
+					font-size: 2rem;
+					line-height: 2.2rem;
+					@media (min-width: 768px) {
+						font-size: 3.5rem;
+						line-height: 4rem;
+					}
+
+				
+
+					@media (min-width: 1200px) {
+						font-size: 4.5rem;
+						line-height: 5rem;
+					}
+				}
+
+				&.lower {
+					color: #858b9b;
+				}
 
 				${(props) =>
 					props.internal &&
@@ -120,7 +147,9 @@ export const TitleStyles = styled.div`
 						}
 					`};
 
-				&:after {
+			
+
+				&:not(.home):after {
 					content: "";
 					display: block;
 					position: relative;
@@ -134,7 +163,7 @@ export const TitleStyles = styled.div`
 
 				@media (min-width: 1100px) {
 					font-size: 2.1rem;
-					line-height: 5rem;
+					line-height: 6rem;
 
 					${(props) =>
 						props.hero &&
@@ -202,18 +231,19 @@ export const TitleStyles = styled.div`
 					}
 
 					.double-container {
+					  
 						position: relative;
-						width: 41px;
-						height: 47px;
+						width: 28px;
+						height: 28px;
 
-						@media (min-width: 900px) {
-							width: 55px;
-							height: 68px;
+						@media (min-width: 768px) {
+						width: 41px;
+						height: 50px;
 						}
 
 						@media (min-width: 1100px) {
-							width: 56px;
-							height: 70px;
+						    width: 53px;
+    						height: 65px;
 						}
 						.letter-1 {
 							color: #36f4ff;
@@ -235,17 +265,17 @@ export const TitleStyles = styled.div`
 						color: #fff;
 					}
 				`};
-		}
-	}
+		
+	
 
 	.subtitle {
 		color: #8d8d8d;
-		text-align: left;
 		position: relative;
-		letter-spacing: 3px;
-		font-size: .9rem;
-
+		letter-spacing: .5px;
+		font-size: 1rem;
+		margin-top: 1rem;
 		font-family: 'Raleway', sans-serif;
+	 
 
 		@media (min-width: 900px) {
 			font-size: 1rem;
@@ -259,29 +289,40 @@ export const TitleStyles = styled.div`
 					letter-spacing: 0px;
 				}
 			`};
-
-		/* &:before {
-			content: '<p>';
-			font-family: 'La Belle Aurore', cursive;
-			color: #515152;
-			font-size: 1rem;
-			position: absolute;
-			left: -10px;
-			top: -25px;
-		}
-
-		&:after {
-			content: '</p>';
-			font-family: 'La Belle Aurore', cursive;
-			color: #515152;
-			font-size: 1rem;
-			position: absolute;
-			bottom: -30px;
-			left: -10px;
-
-			@media (min-width: 1100px) {
-				left: -10px;
-			}
-		} */
 	}
+
+	/* ${(props) =>
+		props.hero &&
+		css`
+			.title-container {
+				.title-wrapper {
+					h1.title {
+						font-size: 2.1rem;
+						line-height: 3rem;
+						@media (min-width: 768px) {
+							font-size: 2.5rem;
+							line-height: 3rem;
+						}
+						.letter-double {
+							.double-container {
+								position: relative;
+								width: 28px;
+								height: 36px;
+								@media (min-width: 768px) {
+									width: 32px;
+									height: 38px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.suptitle {
+				text-align: left;
+				color: #fff;
+				font-family: 'Roboto Mono', sans-serif;
+				color: #36f4ff;
+			}
+		`}; */
 `;
