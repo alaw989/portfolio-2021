@@ -3,13 +3,19 @@ import styled from 'styled-components';
 export const HeaderStyles = styled.div`
 	position: fixed;
 	width: 100%;
-	padding: 20px 40px;
+	padding: 0px 20px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 100px;
-	z-index: 3; 
-	
+	height: 75px;
+	z-index: 3;
+	transition: all .5s ease-in;
+	transform: ${(props) => (props.scroll ? 'translateY(0px)' : 'translateY(-75px)')};
+	backdrop-filter: ${(props) => (props.top ? 'blur(0px);' : 'blur(10px);')};
+	@media (min-width: 768px) {
+		padding: 0px 40px; 
+	}
+
 	.logo {
 		left: 25px;
 		top: 25px;
@@ -45,6 +51,29 @@ export const HeaderStyles = styled.div`
 				color: #00f;
 				animation-delay: -0.33s;
 				left: 0.5px;
+			}
+		}
+	}
+
+	.right-container {
+		display: flex;
+		align-items: center;
+		a {
+			margin-right: 10px;
+			border: 1px solid #36f4ff;
+			border-radius: 0;
+			background-color: #000;
+			padding: 5px 10px;
+			color: #36f4ff;
+			font-family: 'Roboto Mono', sans-serif;
+			letter-spacing: 2px;
+			transition: .5s all;
+			border-radius: 5px;
+			background-color: transparent;
+			font-size: .8rem;
+			&:hover {
+				color: #000;
+				background-color: #36f4ff;
 			}
 		}
 	}

@@ -33,51 +33,14 @@ const Portfolio = () => {
 			<Container fluid>
 				<Row className="justify-content-center">
 					<Col xs={11} md={10} lg={9}>
-						<TitleStyles internal portfolio>
+						<TitleStyles portfolio>
 							<div className="title-container" id="portfolio">
 								<div className="title-wrapper">
-									<h1 className="title">
-										<FadeIn transitionDuration={1000} delay={100} className="letter">
-											M
-										</FadeIn>
-										<FadeIn transitionDuration={1000} delay={200} className="letter margin-r">
-											y
-										</FadeIn>
-										<FadeIn transitionDuration={1000} delay={300} className="letter ">
-											P
-										</FadeIn>
-										<FadeIn transitionDuration={1000} delay={400} className="letter">
-											o
-										</FadeIn>
-										<FadeIn transitionDuration={1000} delay={500} className="letter">
-											r
-										</FadeIn>
-										<FadeIn transitionDuration={1000} delay={600} className="letter">
-											t
-										</FadeIn>
-										<FadeIn transitionDuration={1000} delay={700} className="letter">
-											f
-										</FadeIn>
-										<FadeIn transitionDuration={1000} delay={800} className="letter">
-											o
-										</FadeIn>
-										<FadeIn transitionDuration={1000} delay={900} className="letter">
-											l
-										</FadeIn>
-										<FadeIn transitionDuration={1000} delay={1000} className="letter">
-											i
-										</FadeIn>
-										<FadeIn transitionDuration={1000} delay={1100} className="letter">
-											o
-										</FadeIn>
-									</h1>
+									<h1 className="title">My Portfolio</h1>
 								</div>
-								<FadeIn delay={1000} transitionDuration={1000}>
-									<p className="subtitle">A small gallery of recent projects chosen by me.</p>
-								</FadeIn>
 							</div>
 						</TitleStyles>
-		
+
 						<FadeIn delay={1500} transitionDuration={1000}>
 							<PortfolioNavStyles opacity={opacity}>
 								<ul className="nav-container">

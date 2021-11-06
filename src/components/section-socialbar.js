@@ -1,8 +1,10 @@
 import { SocialBarStyles } from '../styles/components/_section-socialbar';
+import FadeIn from 'react-fade-in';
 
 const SocialBar = () => {
 	return (
 		<SocialBarStyles>
+			<FadeIn transitionDuration={1000} delay={100}>
 			<div class="icon-container">
 				<a href="https://github.com/alaw989" aria-label="GitHub" target="_blank" rel="noreferrer">
 					<svg
@@ -77,6 +79,7 @@ const SocialBar = () => {
 					</svg>
 				</a>
 			</div>
+			</FadeIn>
 		</SocialBarStyles>
 	);
 };

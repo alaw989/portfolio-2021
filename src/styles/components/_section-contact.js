@@ -33,62 +33,7 @@ export const ContactStyles = styled.div`
 			display: none !important; 
 		}
 
-	/* .map-container {
-		width: 100%;
-		position: absolute;
-		height: 400px;
-		&.mobile {
-			display: block;
-			position: relative;
-			margin-top: 50px;
-		}
-		&.desktop {
-			display: none;
-		}
 
-		@media (min-width: 992px) {
-			height: 100%;
-			top: 0;
-			width: 50%;
-			&.desktop {
-				display: block;
-				right: 0;
-			}
-			&.mobile {
-				display: none;
-			}
-		}
-
-		.map-text {
-			position: absolute;
-			top: 30px;
-			left: 30px;
-			z-index: 1;
-			color: white;
-			background-color: rgba(0, 0, 0, .8);
-			padding: 10px;
-			text-align: left;
-			font-family: 'Roboto', sans-serif;
-			span {
-				color: #36F4FF;
-			}
-		}
-
-		.map-bg {
-			position: absolute;
-			top: 0;
-			right: 0;
-			height: 100%;
-			width: 100%;
-			background-size: cover;
-			background-repeat: no-repeat;
-
-			@media (min-width: 992px) {
-				width: 100%;
-				height: 100%;
-			}
-		}
-	} */
 	.section-contact {
 		color: #fff;
 		height: 100%;
@@ -112,12 +57,13 @@ export const ContactStyles = styled.div`
             background-color: #000;
             padding: 10px 20px; 
             color: #36F4FF;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Mono', sans-serif;
             letter-spacing: 2px;
             margin-top: 20px; 
             transition: .5s all;
             border-radius: 5px; 
 			background-color: #1d1d1d;
+			font-size: .8rem;
             &:hover {
                 color: #000;
                 background-color: #36F4FF;

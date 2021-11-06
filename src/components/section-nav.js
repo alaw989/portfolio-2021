@@ -1,5 +1,5 @@
 import { SectionNavStyles } from '../styles/components/_section-nav.js';
-import { NavLink, HashRouter } from 'react-router-dom';
+import {  HashRouter } from 'react-router-dom';
 import { opacityContext } from '../contexts/siteContext';
 import { useContext } from 'react';
 import FadeIn from 'react-fade-in';

@@ -25,7 +25,8 @@ export const PageStyles = styled.div`
 		background-color: #1d1d1d;
 		background-position: 25%;
 		mix-blend-mode: hard-light;
-
+		transition: .5s all ease-out;
+		
 		&:after {
 			position: absolute;
 			content: "";

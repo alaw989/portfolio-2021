@@ -38,7 +38,7 @@ export const PortfolioStyles = styled.div`
 			right: 0;
 			font-weight: 700;
 			letter-spacing: -7px;
-			color: rgba(255, 255, 255, .05);
+			color: rgba(255, 255, 255, .02);
 			z-index: 0;
 			top: -100px;
 			@media (min-width: 992px) {
@@ -83,7 +83,7 @@ export const PortfolioStyles = styled.div`
 					cursor: pointer;
 					transform: scale(1);
 					transition: .5s all;
-					border-radius: 15px;
+					border-radius: 5px;
 					margin-bottom: 10px;
 
 					&:hover {

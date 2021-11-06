@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import css from 'styled-components';
 
 export const FixedStyles = styled.div`
 	position: fixed;

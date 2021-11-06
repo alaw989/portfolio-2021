@@ -7,13 +7,16 @@ export const TitleStyles = styled.div`
 		css`
 			max-width: 1100px;
 			margin: 0 auto;
+			.subtitle {
+				text-align: left;
+			}
 		`};
 
 	
 		${(props) =>
 			props.hero &&
 			css`
-			max-width: 1000px;
+				max-width: 1000px;
 				.subtitle {
 					text-align: left;
 					max-width: 540px;
@@ -39,14 +42,13 @@ export const TitleStyles = styled.div`
 			css`
 				.subtitle {
 					text-align: left;
+				
 				}
 			`}
 
-	
-	
-
 			.sup-title {
 				font-family: 'Roboto Mono', sans-serif;
+				color: #36F4FF;
 				&:before {
 					content: "03.";
 					position: relative;
@@ -89,8 +91,6 @@ export const TitleStyles = styled.div`
 						line-height: 4rem;
 					}
 
-				
-
 					@media (min-width: 1200px) {
 						font-size: 4.5rem;
 						line-height: 5rem;
@@ -98,7 +98,7 @@ export const TitleStyles = styled.div`
 				}
 
 				&.lower {
-					color: #858b9b;
+					color: #8d8d8d;;
 				}
 
 				${(props) =>
@@ -128,7 +128,7 @@ export const TitleStyles = styled.div`
 					css`
 						&:before {
 							content: "01.";
-
+						
 							@media (min-width: 992px) {
 								bottom: -4px;
 							}
@@ -138,12 +138,30 @@ export const TitleStyles = styled.div`
 				${(props) =>
 					props.portfolio &&
 					css`
+						display: flex;
+						align-items: center;
 						&:before {
 							content: "02.";
-
+							font-family: 'Roboto Mono', sans-serif;
+							font-size: 1.3rem;
+							font-weight: 600;
+							margin-right: 10px;
+							color: #36f4ff;
+							position: relative; 
 							@media (min-width: 992px) {
 								bottom: -4px;
 							}
+						}
+						&:after {
+							content: "";
+							display: block;
+							position: relative;
+							top: -5px;
+							width: 300px;
+							height: 1px;
+							margin-left: 20px;
+							background-color: #292929;
+							margin-top: 8px;
 						}
 					`};
 
@@ -213,7 +231,7 @@ export const TitleStyles = styled.div`
 					}
 
 					&.margin-r {
-						margin-right: 8px;
+						margin-right: 15px;
 					}
 					&:not(.double) {
 						div {
@@ -241,7 +259,7 @@ export const TitleStyles = styled.div`
 						height: 50px;
 						}
 
-						@media (min-width: 1100px) {
+						@media (min-width: 1192px) {
 						    width: 53px;
     						height: 65px;
 						}
@@ -269,13 +287,13 @@ export const TitleStyles = styled.div`
 	
 
 	.subtitle {
-		color: #8d8d8d;
+		color: #a5a0a0;
 		position: relative;
 		letter-spacing: .5px;
 		font-size: 1rem;
 		margin-top: 1rem;
 		font-family: 'Raleway', sans-serif;
-	 
+	
 
 		@media (min-width: 900px) {
 			font-size: 1rem;
@@ -285,44 +303,9 @@ export const TitleStyles = styled.div`
 			props.internal &&
 			css`
 				& {
-					color: #fff;
+						color: #a5a0a0;
 					letter-spacing: 0px;
 				}
 			`};
 	}
-
-	/* ${(props) =>
-		props.hero &&
-		css`
-			.title-container {
-				.title-wrapper {
-					h1.title {
-						font-size: 2.1rem;
-						line-height: 3rem;
-						@media (min-width: 768px) {
-							font-size: 2.5rem;
-							line-height: 3rem;
-						}
-						.letter-double {
-							.double-container {
-								position: relative;
-								width: 28px;
-								height: 36px;
-								@media (min-width: 768px) {
-									width: 32px;
-									height: 38px;
-								}
-							}
-						}
-					}
-				}
-			}
-
-			.suptitle {
-				text-align: left;
-				color: #fff;
-				font-family: 'Roboto Mono', sans-serif;
-				color: #36f4ff;
-			}
-		`}; */
 `;

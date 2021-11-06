@@ -7,7 +7,7 @@ import { opacityContext } from '../contexts/siteContext';
 import { useContext } from 'react';
 import pluto from '../img/pluto.png';
 
-const Home = () => {
+const Home = (pos) => {
 	const { opacity } = useContext(opacityContext);
 
 	return (
@@ -15,11 +15,11 @@ const Home = () => {
 			<div
 				className="austin-bg"
 				id="home"
-				style={{ backgroundImage: `linear-gradient(to left, transparent, #1d1d1d), url(${pluto})` }}
+				style={{ backgroundImage: `linear-gradient(to left, transparent, #1d1d1d), url(${pluto})`, transform: `translateY(${pos.pos}px)` }}
 			/>
 			<Container fluid>
 				<Row className="justify-content-center">
-					<Col xs={11} md={10} lg={10}>
+					<Col xs={11} md={10} lg={8}>
 						<TitleStyles hero>
 							<FadeIn transitionDuration={500} delay={600}>
 								<p className="suptitle">Hi, my name is</p>

@@ -9,14 +9,29 @@ import Footer from './components/section-footer';
 import Portfolio from './components/page-portfolio';
 import Fixed from './components/section-fixed';
 import SocialBar from './components/section-socialbar';
-import { Route, HashRouter } from 'react-router-dom';
 import { opacityContext } from './contexts/siteContext';
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import pluto from './img/pluto.png';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 function App() {
 	const [ opacity, setOpacity ] = useState();
+	const [ hideOnScroll, setHideOnScroll ] = useState(true);
+	const [ isAtTop, setIsAtTop ] = useState(true);
+	const [ pos, setPos ] = useState('');
+
+	useScrollPosition(
+		({ prevPos, currPos }) => {
+			const isShow = currPos.y > prevPos.y;
+			if (isShow !== hideOnScroll) setHideOnScroll(isShow);
+
+			currPos.y === 0 ? setIsAtTop(true) : setIsAtTop(false);
+			setPos(currPos.y)
+		},
+		[ hideOnScroll ]
+	);
+
 
 	return (
 		<div className="App">
@@ -26,23 +41,17 @@ function App() {
 					setOpacity
 				}}
 			>
-				<Header />
+				<Header scroll={hideOnScroll} top={isAtTop} />
 				<SectionNav />
-				<Home />
+				<Home pos={pos}/>
 				<About />
 				<Portfolio />
 				<Contact />
-				{/* <HashRouter>
-					<Route exact path="/" component={Home} />
-					<Route path="/about" component={About} />
-					<Route path="/portfolio" component={Portfolio} />
-					<Route path="/contact" component={Contact} />
-				</HashRouter> */}
 			</opacityContext.Provider>
 			<Footer />
 			<Fixed />
 			<SocialBar />
-			<div className="fixed-bottom-bg" style={{ backgroundImage: `url(${pluto})` }}></div>
+			<div className="fixed-bottom-bg" style={{ backgroundImage: `url(${pluto})` }} />
 		</div>
 	);
 }
