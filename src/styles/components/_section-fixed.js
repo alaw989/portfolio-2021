@@ -15,7 +15,7 @@ export const FixedStyles = styled.div`
 		a.email {
 			display: flex;
 			flex-direction: row;
-			color: #fff;
+			color: rgb(165, 160, 160);
 			font-family: 'Roboto Mono', sans-serif;
 			position: absolute;
 			right: -120px;

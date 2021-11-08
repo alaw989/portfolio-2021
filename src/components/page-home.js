@@ -11,7 +11,7 @@ const Home = (pos) => {
 	const { opacity } = useContext(opacityContext);
 
 	return (
-		<PageStyles opacity={opacity}>
+		<PageStyles opacity={opacity} id="home">
 			<div
 				className="austin-bg"
 				id="home"

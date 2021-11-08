@@ -3,7 +3,8 @@ import { css } from 'styled-components';
 
 export const PortfolioNavStyles = styled.div`
 	transition: .5s all;
-
+	max-width: 1100px;
+	margin: 0 auto;
 	${(props) =>
 		props.opacity &&
 		css`
@@ -21,6 +22,10 @@ export const PortfolioNavStyles = styled.div`
 		position: relative;
 		z-index: 3;
 
+		@media (min-width: 768px) {
+			justify-content: flex-end;
+		}
+
 		li {
 			list-style-type: none;
 			color: #fff;
@@ -31,6 +36,13 @@ export const PortfolioNavStyles = styled.div`
 			letter-spacing: 1px;
 			transition: .5s all;
 			padding: 10px;
+
+			@media (min-width: 768px) {
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
 			&:hover {
 				color: #ff4136;
 			}
@@ -39,7 +51,7 @@ export const PortfolioNavStyles = styled.div`
 				color: #ff4136;
 				background-color: rgba(0, 0, 0, 0.3);
 				padding: 10px 15px;
-                border-radius: 5px; 
+				border-radius: 5px;
 			}
 		}
 	}

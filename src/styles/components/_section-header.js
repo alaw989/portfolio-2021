@@ -71,6 +71,10 @@ export const HeaderStyles = styled.div`
 			border-radius: 5px;
 			background-color: transparent;
 			font-size: .8rem;
+			display: none; 
+			@media (min-width: 768px) {
+				display: block;
+			}
 			&:hover {
 				color: #000;
 				background-color: #36f4ff;

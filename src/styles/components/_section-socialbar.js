@@ -31,7 +31,7 @@ export const SocialBarStyles = styled.div`
 		flex-direction: column;
 		margin-bottom: 110px;
 		a {
-			color: #fff;
+			    color: rgb(165, 160, 160);
             margin-bottom: 25px; 
             transition: .5s all;
             &:hover {

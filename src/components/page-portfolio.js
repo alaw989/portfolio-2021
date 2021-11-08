@@ -22,7 +22,8 @@ const Portfolio = () => {
 	var settings = {
 		dots: false,
 		arrows: false,
-		infinite: false
+		infinite: false,
+		adaptiveHeight: true
 	};
 
 	const customSlider = useRef();
@@ -68,10 +69,10 @@ const Portfolio = () => {
 
 						<div className="slide-wrapper">
 							<div className="slide-container">
-								<FadeIn delay={1000} transitionDuration={1000}>
+								{/* <FadeIn delay={1000} transitionDuration={1000}>
 									{' '}
 									<div className="big-text">Work</div>
-								</FadeIn>
+								</FadeIn> */}
 								<Slider ref={customSlider} {...settings}>
 									<div className="slide">
 										<FadeIn delay={1000} transitionDuration={1000}>
