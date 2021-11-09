@@ -48,12 +48,13 @@ const Header = ({ scroll, top }) => {
 						<div className="b">A</div>
 					</div>
 				</a>
-			</FadeIn>
-			<div className="right-container">
-				<a href={resume} target="_blank" rel="noreferrer" class="resume-button">
-					Resume
-				</a>
-				<FadeIn transitionDuration={1000} delay={400}>
+			</FadeIn>{' '}
+			<FadeIn transitionDuration={1000} delay={400}>
+				<div className="right-container">
+					<a href={resume} target="_blank" rel="noreferrer" className="resume-button">
+						Resume
+					</a>
+
 					<MmenuStyles opacity={opacity}>
 						<div
 							className="menu-container"
@@ -64,8 +65,8 @@ const Header = ({ scroll, top }) => {
 							{menu}
 						</div>
 					</MmenuStyles>
-				</FadeIn>
-			</div>
+				</div>{' '}
+			</FadeIn>
 		</HeaderStyles>
 	);
 };

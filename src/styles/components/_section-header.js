@@ -9,9 +9,10 @@ export const HeaderStyles = styled.div`
 	align-items: center;
 	height: 75px;
 	z-index: 3;
-	transition: all .5s ease-in;
+	transition: all .5s;
 	transform: ${(props) => (props.scroll ? 'translateY(0px)' : 'translateY(-75px)')};
 	backdrop-filter: ${(props) => (props.top ? 'blur(0px);' : 'blur(10px);')};
+
 	@media (min-width: 768px) {
 		padding: 0px 40px; 
 	}

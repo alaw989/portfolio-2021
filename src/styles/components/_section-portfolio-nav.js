@@ -18,7 +18,7 @@ export const PortfolioNavStyles = styled.div`
 		padding: 0;
 		margin-bottom: 0;
 		margin-top: 30px;
-		cursor: pointer;
+	
 		position: relative;
 		z-index: 3;
 
@@ -44,11 +44,11 @@ export const PortfolioNavStyles = styled.div`
 			}
 
 			&:hover {
-				color: #ff4136;
+				color: rgb(54, 244, 255);
 			}
 
 			&.highlighted {
-				color: #ff4136;
+				color: rgb(54, 244, 255);
 				background-color: rgba(0, 0, 0, 0.3);
 				padding: 10px 15px;
 				border-radius: 5px;

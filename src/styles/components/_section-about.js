@@ -55,7 +55,7 @@ export const AboutStyles = styled.div`
 					right: -17px;
 				}
 				@media (min-width: 992px) {
-					bottom: 85px;
+					bottom: 75px;
 					right: -20px;
 				}
 			}
@@ -117,7 +117,7 @@ export const AboutStyles = styled.div`
 				right: -21px;
 			}
 			@media (min-width: 992px) {
-				bottom: 77px;
+				bottom: 65px;
 				right: -29px; 
 			}
 		}

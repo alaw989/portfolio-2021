@@ -11,7 +11,7 @@ const About = () => {
 	const { opacity } = useContext(opacityContext);
 
 	const [ aboutInView, setAboutInView ] = useState();
-	console.log(aboutInView);
+
 	return (
 		<AboutStyles opacity={opacity}>
 			<Container fluid>
@@ -34,7 +34,7 @@ const About = () => {
 												<br />
 												Fast forward to today, and now I create successful responsive websites
 												that are fast, easy to use, and built with best practices. The main area
-												of my expertise is front-end development, HTML, CSS, JS, building small
+												of my expertise is front-end development, building small
 												and medium web apps, features, animations, and coding interactive
 												layouts.
 												<br />

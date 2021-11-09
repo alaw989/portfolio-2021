@@ -26,14 +26,15 @@ function App() {
 		({ prevPos, currPos }) => {
 			const isShow = currPos.y > prevPos.y;
 			if (isShow !== hideOnScroll) setHideOnScroll(isShow);
-
-			currPos.y === 0 ? setIsAtTop(true) : setIsAtTop(false);
+			if (currPos.y >= -200) setHideOnScroll(true);
+			currPos.y >= -200 ? setIsAtTop(true) : setIsAtTop(false);
 			setPos(currPos.y);
+			// console.log('curr:', currPos.y);
+			// console.log('prev:', prevPos.y);
 		},
 		[ hideOnScroll ]
 	);
 
-	const [ aboutInView, setAboutInView ] = useState(false);
 	const [ portfolioInView, setPortfolioInView ] = useState(false);
 	const [ contactInView, setContactInView ] = useState(false);
 
