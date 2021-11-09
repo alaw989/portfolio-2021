@@ -5,11 +5,13 @@ import FadeIn from 'react-fade-in/lib/FadeIn';
 import { useContext } from 'react';
 import { opacityContext } from '../contexts/siteContext';
 
-const Contact = () => {
+const Contact = (view) => {
 	const { opacity } = useContext(opacityContext);
 
+
+
 	return (
-		<ContactStyles opacity={opacity}>
+		<ContactStyles opacity={opacity} style={{opacity: view.view ? 1 : 0}}>
 			<div className="section-contact" id="contact">
 				<Container fluid>
 					<Row className="justify-content-center">
@@ -89,8 +91,9 @@ const Contact = () => {
 												</div>
 												<FadeIn delay={1000} transitionDuration={1000}>
 													<p className="subtitle">
-														I'm currently open to any new opportunities. Whether you have a question or just want to say hi, I’ll
-														try my best to get back to you!
+														I'm currently open to any new opportunities. Whether you have a
+														question or just want to say hi, I’ll try my best to get back to
+														you!
 													</p>
 												</FadeIn>
 											</div>

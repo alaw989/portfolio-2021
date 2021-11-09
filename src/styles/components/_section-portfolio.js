@@ -9,9 +9,9 @@ export const PortfolioStyles = styled.div`
 	z-index: 1;
 	transition: .5s all;
 	padding: 80px 0; 
-	min-height: 1000px;
-	z-index: 1;
 
+	z-index: 1;
+	transition-delay: .5s; 
 	@media (min-width: 768px) {
 		padding: 100px 0; 
 	}
@@ -19,8 +19,6 @@ export const PortfolioStyles = styled.div`
 	@media (min-width: 992px) {
 		min-height: 0;
 	}
-
-
 
 	${(props) =>
 		props.opacity &&

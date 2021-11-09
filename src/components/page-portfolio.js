@@ -1,5 +1,4 @@
 import { TitleStyles } from '../styles/components/_section-title.js';
-import FadeIn from 'react-fade-in';
 import { Container, Row, Col } from 'react-bootstrap';
 import React from 'react';
 import Slider from 'react-slick';
@@ -16,7 +15,7 @@ import beewindow from '../img/beewindow.png';
 import movieapp from '../img/movieapp.png';
 import apex from '../img/apex.png';
 
-const Portfolio = () => {
+const Portfolio = (view) => {
 	const { opacity } = useContext(opacityContext);
 
 	var settings = {
@@ -30,7 +29,7 @@ const Portfolio = () => {
 	const [ color, setColor ] = useState(0);
 
 	return (
-		<PortfolioStyles opacity={opacity}>
+		<PortfolioStyles opacity={opacity} style={{ opacity: view.view ? 1 : 0 }}>
 			<Container fluid>
 				<Row className="justify-content-center">
 					<Col xs={11} md={10} lg={9}>
@@ -42,30 +41,28 @@ const Portfolio = () => {
 							</div>
 						</TitleStyles>
 
-						<FadeIn delay={1500} transitionDuration={1000}>
-							<PortfolioNavStyles opacity={opacity}>
-								<ul className="nav-container">
-									<li
-										className={color === 0 ? 'highlighted' : ''}
-										onClick={() => {
-											customSlider.current.slickGoTo(0);
-											setColor(0);
-										}}
-									>
-										Wordpress Custom Builds
-									</li>
-									<li
-										className={color === 1 ? 'highlighted' : ''}
-										onClick={() => {
-											customSlider.current.slickGoTo(1);
-											setColor(1);
-										}}
-									>
-										React Apps
-									</li>
-								</ul>
-							</PortfolioNavStyles>
-						</FadeIn>
+						<PortfolioNavStyles opacity={opacity}>
+							<ul className="nav-container">
+								<li
+									className={color === 0 ? 'highlighted' : ''}
+									onClick={() => {
+										customSlider.current.slickGoTo(0);
+										setColor(0);
+									}}
+								>
+									Wordpress Custom Builds
+								</li>
+								<li
+									className={color === 1 ? 'highlighted' : ''}
+									onClick={() => {
+										customSlider.current.slickGoTo(1);
+										setColor(1);
+									}}
+								>
+									React Apps
+								</li>
+							</ul>
+						</PortfolioNavStyles>
 
 						<div className="slide-wrapper">
 							<div className="slide-container">
@@ -75,171 +72,163 @@ const Portfolio = () => {
 								</FadeIn> */}
 								<Slider ref={customSlider} {...settings}>
 									<div className="slide">
-										<FadeIn delay={1000} transitionDuration={1000}>
-											<div className="section-portfolio">
-												<ul className="portfolio-wrapper">
-													<a
-														href="http://miamiwaterandair.com"
-														target="_blank"
-														rel="noreferrer"
-													>
-														<li className="project-block">
+										<div className="section-portfolio">
+											<ul className="portfolio-wrapper">
+												<a href="http://miamiwaterandair.com" target="_blank" rel="noreferrer">
+													<li className="project-block">
+														{' '}
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${miami})` }}
+														>
 															{' '}
-															<div
-																className="bg-image"
-																style={{ backgroundImage: `url(${miami})` }}
-															>
-																{' '}
-															</div>
-															<div className="bg-overlay" />
-															<div className="hover-container">
-																View <br />Project
-															</div>
-															<div className="project-title">Miami Water & Air</div>
-														</li>
-													</a>
-													<a
-														href="https://gutterhelmetofnorthflorida.com/"
-														target="_blank"
-														rel="noreferrer"
-													>
-														<li className="project-block">
+														</div>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															View <br />Project
+														</div>
+														<div className="project-title">Miami Water & Air</div>
+													</li>
+												</a>
+												<a
+													href="https://gutterhelmetofnorthflorida.com/"
+													target="_blank"
+													rel="noreferrer"
+												>
+													<li className="project-block">
+														{' '}
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${gutterhelmet})` }}
+														/>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															View <br />Project
+														</div>
+														<div className="project-title">
+															Gutter Helmet of North Florida
+														</div>
+													</li>
+												</a>
+												<a href="https://cqm-inc.com/" target="_blank" rel="noreferrer">
+													<li className="project-block">
+														{' '}
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${cqm})` }}
+														>
 															{' '}
-															<div
-																className="bg-image"
-																style={{ backgroundImage: `url(${gutterhelmet})` }}
-															/>
-															<div className="bg-overlay" />
-															<div className="hover-container">
-																View <br />Project
-															</div>
-															<div className="project-title">
-																Gutter Helmet of North Florida
-															</div>
-														</li>
-													</a>
-													<a href="https://cqm-inc.com/" target="_blank" rel="noreferrer">
-														<li className="project-block">
+														</div>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															View <br />Project
+														</div>
+														<div className="project-title">CQM Inc.</div>
+													</li>
+												</a>
+												<a
+													href="https://daveyoho22030.dev14.sociusinc.com/"
+													target="_blank"
+													rel="noreferrer"
+												>
+													<li className="project-block">
+														{' '}
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${dave})` }}
+														>
 															{' '}
-															<div
-																className="bg-image"
-																style={{ backgroundImage: `url(${cqm})` }}
-															>
-																{' '}
-															</div>
-															<div className="bg-overlay" />
-															<div className="hover-container">
-																View <br />Project
-															</div>
-															<div className="project-title">CQM Inc.</div>
-														</li>
-													</a>
-													<a
-														href="https://daveyoho22030.dev14.sociusinc.com/"
-														target="_blank"
-														rel="noreferrer"
-													>
-														<li className="project-block">
+														</div>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															View <br />Project
+														</div>
+														<div className="project-title">Dave Yoho & Associates</div>
+													</li>
+												</a>
+												<a
+													href="http://pondroofing22031.dev14.sociusinc.com/"
+													target="_blank"
+													rel="noreferrer"
+												>
+													<li className="project-block">
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${pond})` }}
+														>
 															{' '}
-															<div
-																className="bg-image"
-																style={{ backgroundImage: `url(${dave})` }}
-															>
-																{' '}
-															</div>
-															<div className="bg-overlay" />
-															<div className="hover-container">
-																View <br />Project
-															</div>
-															<div className="project-title">Dave Yoho & Associates</div>
-														</li>
-													</a>
-													<a
-														href="http://pondroofing22031.dev14.sociusinc.com/"
-														target="_blank"
-														rel="noreferrer"
-													>
-														<li className="project-block">
-															<div
-																className="bg-image"
-																style={{ backgroundImage: `url(${pond})` }}
-															>
-																{' '}
-															</div>
-															<div className="bg-overlay" />
-															<div className="hover-container">
-																{' '}
-																View <br />Project{' '}
-															</div>
-															<div className="project-title">Pond Roofing</div>
-														</li>
-													</a>
-													<a href="https://beewindow.com" target="_blank" rel="noreferrer">
-														<li className="project-block">
-															<div
-																className="bg-image"
-																style={{ backgroundImage: `url(${beewindow})` }}
-															>
-																{' '}
-															</div>
-															<div className="bg-overlay" />
-															<div className="hover-container">
-																View <br />Project
-															</div>
-															<div className="project-title">Bee Window</div>
-														</li>
-													</a>
-												</ul>
-											</div>
-										</FadeIn>
+														</div>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															{' '}
+															View <br />Project{' '}
+														</div>
+														<div className="project-title">Pond Roofing</div>
+													</li>
+												</a>
+												<a href="https://beewindow.com" target="_blank" rel="noreferrer">
+													<li className="project-block">
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${beewindow})` }}
+														>
+															{' '}
+														</div>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															View <br />Project
+														</div>
+														<div className="project-title">Bee Window</div>
+													</li>
+												</a>
+											</ul>
+										</div>
 									</div>
 									<div className="slide">
 										{' '}
-										<FadeIn delay={1000} transitionDuration={1000}>
-											<div className="section-portfolio">
-												<ul className="portfolio-wrapper">
-													<a
-														href="https://evening-bayou-68505.herokuapp.com/"
-														target="_blank"
-														rel="noreferrer"
-													>
-														<li className="project-block">
-															<div
-																className="bg-image"
-																style={{ backgroundImage: `url(${movieapp})` }}
-															>
-																{' '}
-															</div>
-															<div className="bg-overlay" />
-															<div className="hover-container">
-																{' '}
-																View <br />Project{' '}
-															</div>
-															<div className="project-title">Movie App</div>
-														</li>
-													</a>
-													<a
-														href="https://apextrackerapp.herokuapp.com/"
-														target="_blank"
-														rel="noreferrer"
-													>
-														<li className="project-block">
-															<div
-																className="bg-image"
-																style={{ backgroundImage: `url(${apex})` }}
-															>
-																{' '}
-															</div>
-															<div className="bg-overlay" />
-															<div className="hover-container">
-																View <br />Project
-															</div>
-															<div className="project-title">Apex Tracker</div>
-														</li>
-													</a>
-												</ul>
-											</div>
-										</FadeIn>
+										<div className="section-portfolio">
+											<ul className="portfolio-wrapper">
+												<a
+													href="https://evening-bayou-68505.herokuapp.com/"
+													target="_blank"
+													rel="noreferrer"
+												>
+													<li className="project-block">
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${movieapp})` }}
+														>
+															{' '}
+														</div>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															{' '}
+															View <br />Project{' '}
+														</div>
+														<div className="project-title">Movie App</div>
+													</li>
+												</a>
+												<a
+													href="https://apextrackerapp.herokuapp.com/"
+													target="_blank"
+													rel="noreferrer"
+												>
+													<li className="project-block">
+														<div
+															className="bg-image"
+															style={{ backgroundImage: `url(${apex})` }}
+														>
+															{' '}
+														</div>
+														<div className="bg-overlay" />
+														<div className="hover-container">
+															View <br />Project
+														</div>
+														<div className="project-title">Apex Tracker</div>
+													</li>
+												</a>
+											</ul>
+										</div>
 									</div>
 								</Slider>
 							</div>

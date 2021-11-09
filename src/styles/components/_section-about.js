@@ -12,7 +12,7 @@ export const AboutStyles = styled.div`
 	max-width: 900px;
 	margin-left: auto;
 	margin-right: auto;
-
+	transition-delay: .5s; 
 	@media (min-width: 768px) {
 		padding: 100px 0;
 	}
@@ -39,6 +39,8 @@ export const AboutStyles = styled.div`
 		margin-top: 3em;
 		position: relative;
 		margin-top: 2em;
+		transition: .5s all;
+		transition-delay: .5s; 
 		&:hover {
 			.bg-overlay {
 				opacity: 0;
@@ -53,8 +55,8 @@ export const AboutStyles = styled.div`
 					right: -17px;
 				}
 				@media (min-width: 992px) {
-					bottom: 104px;
-					right: -25px;
+					bottom: 85px;
+					right: -20px;
 				}
 			}
 		}
@@ -115,7 +117,7 @@ export const AboutStyles = styled.div`
 				right: -21px;
 			}
 			@media (min-width: 992px) {
-				bottom: 97px;
+				bottom: 77px;
 				right: -29px; 
 			}
 		}

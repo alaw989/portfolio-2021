@@ -40,6 +40,8 @@ export const TitleStyles = styled.div`
 	${(props) =>
 		props.about &&
 		css`
+		transition: .5s all;
+		transition-delay: .5s; 
 			.subtitle {
 				text-align: left;
 			}

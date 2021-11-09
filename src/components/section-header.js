@@ -17,6 +17,14 @@ const Header = ({ scroll, top }) => {
 		}
 	};
 
+	const changeOpacity2 = () => {
+		if (opacity) {
+			setOpacity(false);
+		} else {
+			setOpacity(false);
+		}
+	};
+
 	useEffect(
 		() => {
 			opacity ? setMenu('Close') : setMenu('Menu');
@@ -27,7 +35,13 @@ const Header = ({ scroll, top }) => {
 	return (
 		<HeaderStyles scroll={scroll} top={top}>
 			<FadeIn transitionDuration={1000} delay={100}>
-				<a href="#top" className="logo">
+				<a
+					href="#top"
+					className="logo"
+					onClick={() => {
+						changeOpacity2();
+					}}
+				>
 					<div className="text">
 						<div className="r">A</div>
 						<div className="g">A</div>

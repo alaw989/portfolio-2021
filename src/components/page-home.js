@@ -58,7 +58,7 @@ const Home = (pos) => {
 								<br />
 							</h1>
 							<FadeIn transitionDuration={500} delay={1600}>
-								<h1 className="title home lower">I write code for the web.</h1>
+								<h1 className="title home lower">I build stuff for the web.</h1>
 							</FadeIn>
 							<FadeIn delay={500} transitionDuration={500}>
 								<FadeIn transitionDuration={500} delay={1700}>

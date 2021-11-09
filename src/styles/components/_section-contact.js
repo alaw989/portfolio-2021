@@ -13,7 +13,9 @@ export const ContactStyles = styled.div`
 	max-width: 600px; 
 	margin-left: auto; 
 	margin-right: auto; 
+	transition-delay: .5s; 
 
+	
 	@media (min-width: 768px) {
 		padding: 100px 0; 
 		margin-bottom: 100px; 

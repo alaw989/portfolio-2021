@@ -14,6 +14,7 @@ import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import pluto from './img/pluto.png';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import { InView } from 'react-intersection-observer';
 
 function App() {
 	const [ opacity, setOpacity ] = useState();
@@ -27,11 +28,14 @@ function App() {
 			if (isShow !== hideOnScroll) setHideOnScroll(isShow);
 
 			currPos.y === 0 ? setIsAtTop(true) : setIsAtTop(false);
-			setPos(currPos.y)
+			setPos(currPos.y);
 		},
 		[ hideOnScroll ]
 	);
 
+	const [ aboutInView, setAboutInView ] = useState(false);
+	const [ portfolioInView, setPortfolioInView ] = useState(false);
+	const [ contactInView, setContactInView ] = useState(false);
 
 	return (
 		<div className="App">
@@ -43,10 +47,14 @@ function App() {
 			>
 				<Header scroll={hideOnScroll} top={isAtTop} />
 				<SectionNav />
-				<Home pos={pos}/>
+				<Home pos={pos} />
 				<About />
-				<Portfolio />
-				<Contact />
+				<InView onChange={setPortfolioInView} triggerOnce={true}>
+					<Portfolio view={portfolioInView} />
+				</InView>
+				<InView onChange={setContactInView} triggerOnce={true}>
+					<Contact view={contactInView} />
+				</InView>
 			</opacityContext.Provider>
 			<Footer />
 			<Fixed />
