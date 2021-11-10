@@ -25,8 +25,9 @@ function App() {
 	useScrollPosition(
 		({ prevPos, currPos }) => {
 			const isShow = currPos.y > prevPos.y;
-			if (isShow !== hideOnScroll) setHideOnScroll(isShow);
+			// if (isShow !== hideOnScroll) setHideOnScroll(isShow);
 			if (currPos.y >= -200) setHideOnScroll(true);
+			if (currPos.y <= -200) setHideOnScroll(false);
 			currPos.y >= -200 ? setIsAtTop(true) : setIsAtTop(false);
 			setPos(currPos.y);
 			// console.log('curr:', currPos.y);

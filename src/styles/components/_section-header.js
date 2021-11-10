@@ -4,13 +4,22 @@ export const HeaderStyles = styled.div`
 	position: fixed;
 	width: 100%;
 	padding: 0px 20px;
-	display: flex;
+
 	justify-content: space-between;
 	align-items: center;
 	height: 75px;
 	z-index: 3;
 	transition: all .5s;
-	transform: ${(props) => (props.scroll ? 'translateY(0px)' : 'translateY(-75px)')};
+	
+	@media (max-width: 992px) {
+		display: ${(props) => (props.scroll ? 'flex' : 'none')};
+	}
+
+	@media (min-width: 992px) {
+		transform: ${(props) => (props.scroll ? 'translateY(0px)' : 'translateY(-75px)')};
+		display: flex;
+	}
+
 	backdrop-filter: ${(props) => (props.top ? 'blur(0px);' : 'blur(10px);')};
 
 	@media (min-width: 768px) {
@@ -37,7 +46,9 @@ export const HeaderStyles = styled.div`
 		.text {
 			> * {
 				font-size: 50px;
-				animation: giggle 1s ease infinite;
+		@media (min-width: 992px) {
+			animation: giggle 1s ease infinite;
+		}
 				mix-blend-mode: difference;
 			}
 			.r {
