@@ -20,6 +20,8 @@ export const HeaderStyles = styled.div`
 		display: flex;
 	}
 
+
+
 	backdrop-filter: ${(props) => (props.top ? 'blur(0px);' : 'blur(10px);')};
 
 	@media (min-width: 768px) {
